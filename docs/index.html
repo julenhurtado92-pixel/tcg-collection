@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Coleccion TCG Portfolio</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="brand-mark">MTG</div>
+      <div>
+        <h1>Coleccion</h1>
+        <p>Portfolio tracker MVP</p>
+      </div>
+    </div>
+    <nav class="nav">
+      <a href="#dashboard" class="nav-link active">Dashboard</a>
+      <a href="#collection" class="nav-link">Coleccion</a>
+      <a href="#review" class="nav-link">Revision</a>
+      <a href="#pipeline" class="nav-link">Pipeline</a>
+    </nav>
+    <div class="sidebar-card">
+      <span class="label">Actualizado</span>
+      <strong id="updatedAt">Pendiente</strong>
+    </div>
+  </aside>
+
+  <main class="main">
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">Coleccion TCG Intelligence</p>
+        <h2>Dashboard de cartera</h2>
+      </div>
+      <div class="top-actions">
+        <button id="imageLookupButton" class="ghost-button" type="button">Resolver imagenes visibles</button>
+        <button id="themeToggle" class="ghost-button" type="button">Modo</button>
+        <a class="primary-button" href="./data/portfolio-data.json" target="_blank" rel="noreferrer">Ver JSON publico</a>
+      </div>
+      <p id="imageLookupStatus" class="lookup-status"></p>
+    </header>
+
+    <section id="dashboard" class="section">
+      <div class="kpi-grid">
+        <article class="kpi-card">
+          <span>Cartas activas</span>
+          <strong id="kpiCards">0</strong>
+          <small>Excluye vendidas/canceladas</small>
+        </article>
+        <article class="kpi-card">
+          <span>Invertido</span>
+          <strong id="kpiInvested">0,00 EUR</strong>
+          <small>Desde Excel</small>
+        </article>
+        <article class="kpi-card">
+          <span>Valor mercado</span>
+          <strong id="kpiMarket">Pendiente</strong>
+          <small>Preparado para Cardmarket / Scryfall</small>
+        </article>
+        <article class="kpi-card warning">
+          <span>Necesitan revision</span>
+          <strong id="kpiReview">0</strong>
+          <small>Matching o imagen</small>
+        </article>
+      </div>
+
+      <div class="dashboard-grid">
+        <article class="panel">
+          <div class="panel-header">
+            <h3>Top ediciones</h3>
+            <span id="setCount" class="pill">0</span>
+          </div>
+          <div id="setBreakdown" class="bar-list"></div>
+        </article>
+        <article class="panel">
+          <div class="panel-header">
+            <h3>Estado de datos</h3>
+            <span class="pill">MVP</span>
+          </div>
+          <div id="dataHealth" class="health-grid"></div>
+        </article>
+      </div>
+    </section>
+
+    <section id="collection" class="section">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Excel -> JSON -> HTML</p>
+          <h2>Coleccion</h2>
+        </div>
+        <div id="resultCount" class="result-count">0 resultados</div>
+      </div>
+
+      <div class="filters">
+        <input id="searchInput" type="search" placeholder="Buscar carta, edicion, numero..." />
+        <select id="setFilter"><option value="">Todas las ediciones</option></select>
+        <select id="languageFilter"><option value="">Todos los idiomas</option></select>
+        <select id="statusFilter"><option value="">Todos los estados</option></select>
+        <select id="conditionFilter"><option value="">Todas las condiciones</option></select>
+      </div>
+
+      <div class="tabs" role="tablist" aria-label="Filtros rapidos">
+        <button class="tab active" data-tab="all" type="button">Todo</button>
+        <button class="tab" data-tab="Holding" type="button">Holding</button>
+        <button class="tab" data-tab="Watchlist" type="button">Watchlist</button>
+        <button class="tab" data-tab="Sold" type="button">Vendido</button>
+        <button class="tab" data-tab="Cancelado" type="button">Cancelado</button>
+        <button class="tab" data-tab="review" type="button">Revision</button>
+      </div>
+
+      <div id="cardsGrid" class="cards-grid"></div>
+      <div id="emptyState" class="empty-state hidden">
+        <h3>No hay cartas para mostrar</h3>
+        <p>Ejecuta el pipeline o ajusta los filtros.</p>
+      </div>
+    </section>
+
+    <section id="review" class="section">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Control de calidad</p>
+          <h2>Elementos a revisar</h2>
+        </div>
+      </div>
+      <div class="panel table-panel">
+        <table>
+          <thead>
+            <tr>
+              <th>Carta</th>
+              <th>Edicion</th>
+              <th>Idioma</th>
+              <th>Motivo</th>
+              <th>Fila Excel</th>
+            </tr>
+          </thead>
+          <tbody id="reviewTableBody"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="pipeline" class="section">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Automatizacion</p>
+          <h2>Pipeline MVP</h2>
+        </div>
+      </div>
+      <div class="pipeline">
+        <div class="step"><span>1</span><strong>Excel</strong><p>Fuente de verdad manual.</p></div>
+        <div class="step"><span>2</span><strong>JSON raw</strong><p>Normalizacion de columnas.</p></div>
+        <div class="step"><span>3</span><strong>Scryfall</strong><p>Imagenes y metadata por script local o fallback del navegador.</p></div>
+        <div class="step"><span>4</span><strong>Portfolio</strong><p>HTML estatico publicable.</p></div>
+      </div>
+      <pre class="code-block">python scripts/build_all.py --excel "collection.xlsx" --sheet "Colección"</pre>
+    </section>
+  </main>
+
+  <dialog id="cardModal" class="modal">
+    <button id="closeModal" class="modal-close" type="button" aria-label="Cerrar">x</button>
+    <div id="modalBody"></div>
+  </dialog>
+
+  <script src="./data/portfolio-data.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>
