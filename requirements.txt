@@ -1,2 +1,0 @@
-# No external Python packages are required for the MVP pipeline.
-# The scripts use only the Python standard library.
