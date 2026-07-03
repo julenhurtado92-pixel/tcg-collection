@@ -124,6 +124,7 @@
   function cleanLookupName(value) {
     return String(value || "")
       .replace(/\s*\[(playset|set|lot)\]\s*$/i, "")
+      .replace(/\s*\(v\.?\s*\d+\)\s*$/i, "")
       .trim();
   }
 
@@ -730,7 +731,7 @@
   }
 
   function cacheKeyFor(card) {
-    return [cleanLookupName(card.lookupName || card.name), card.set || "", card.language || ""].map(normalizeText).join("|");
+    return [cleanLookupName(card.lookupName || card.name), card.setCode || card.set || "", card.cardNumber || "", card.language || ""].map(normalizeText).join("|");
   }
 
   function loadRuntimeCache() {
@@ -769,7 +770,7 @@
     }
   }
 
-  function imageFromScryfallPayload(payload) {
+  function imageFromScryfallPayload(payload, matchedBy = "browser-runtime") {
     if (!payload) return null;
     const images = payload.image_uris || (payload.card_faces && payload.card_faces[0] && payload.card_faces[0].image_uris) || {};
     const image = images.normal || images.large || images.small || images.png;
@@ -780,8 +781,8 @@
       scryfallUrl: payload.scryfall_uri,
       scryfall: {
         matched: true,
-        matchedBy: "browser-runtime",
-        score: 60,
+        matchedBy,
+        score: matchedBy.includes("set") ? 95 : 60,
         id: payload.id,
         name: payload.name,
         lang: payload.lang,
@@ -793,16 +794,57 @@
     };
   }
 
+  function scryfallLang(value) {
+    const key = normalizeText(value);
+    const map = {
+      "ingles": "en", "english": "en",
+      "japones": "ja", "japanese": "ja",
+      "espanol": "es", "spanish": "es",
+      "chino s": "zhs", "chinese": "zhs", "simplified chinese": "zhs",
+      "chino t": "zht", "traditional chinese": "zht",
+      "italiano": "it", "italian": "it",
+      "frances": "fr", "french": "fr",
+      "aleman": "de", "german": "de",
+      "ruso": "ru", "russian": "ru"
+    };
+    return map[key] || "";
+  }
+
   async function lookupScryfall(card) {
     const name = cleanLookupName(card.lookupName || card.name);
     if (!name || isLikelyNonMtg(card)) return { notFound: true, reason: "skip-non-mtg" };
+
+    const setCode = String(card.setCode || "").trim().toLowerCase();
+    const collectorNumber = String(card.cardNumber || "").trim();
+    if (setCode && collectorNumber) {
+      const lang = scryfallLang(card.language);
+      const exactUrls = [];
+      if (lang) exactUrls.push(`https://api.scryfall.com/cards/${encodeURIComponent(setCode)}/${encodeURIComponent(collectorNumber)}/${encodeURIComponent(lang)}`);
+      exactUrls.push(`https://api.scryfall.com/cards/${encodeURIComponent(setCode)}/${encodeURIComponent(collectorNumber)}`);
+      for (const url of exactUrls) {
+        const payload = await fetchJsonWithTimeout(url);
+        const result = imageFromScryfallPayload(payload, "browser-runtime-set-collector");
+        if (result) return result;
+      }
+    }
+
+    if (setCode) {
+      const escapedName = name.replace(/"/g, "\"");
+      const query = `!"${escapedName}" set:${setCode}`;
+      const searchUrl = `https://api.scryfall.com/cards/search?unique=prints&order=set&q=${encodeURIComponent(query)}`;
+      const payload = await fetchJsonWithTimeout(searchUrl);
+      const first = payload && Array.isArray(payload.data) ? payload.data[0] : null;
+      const result = imageFromScryfallPayload(first, "browser-runtime-set-search");
+      if (result) return result;
+    }
+
     const exactUrl = `https://api.scryfall.com/cards/named?exact=${encodeURIComponent(name)}`;
     let payload = await fetchJsonWithTimeout(exactUrl);
-    let result = imageFromScryfallPayload(payload);
+    let result = imageFromScryfallPayload(payload, "browser-runtime-name-exact");
     if (result) return result;
     const fuzzyUrl = `https://api.scryfall.com/cards/named?fuzzy=${encodeURIComponent(name)}`;
     payload = await fetchJsonWithTimeout(fuzzyUrl);
-    result = imageFromScryfallPayload(payload);
+    result = imageFromScryfallPayload(payload, "browser-runtime-name-fuzzy");
     return result || { notFound: true, reason: "not-found" };
   }
 
