@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mi Coleccion TCGs - Portfolio</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <button id="menuButton" class="menu-button" type="button" aria-label="Abrir menu" aria-haspopup="dialog" aria-controls="menuDialog">
+      <span></span><span></span><span></span>
+    </button>
+
+    <a class="logo" href="#dashboard" aria-label="Ir al dashboard">
+      <span class="logo-mark">TCG</span>
+      <span class="logo-text">MI COLECCION</span>
+    </a>
+
+    <div class="header-context">
+      <span>Portfolio</span>
+      <strong id="headerUpdatedAt">Pendiente</strong>
+    </div>
+
+    <div class="header-actions">
+      <button id="themeToggle" class="header-button" type="button">Modo</button>
+      <a class="header-button" href="./data/portfolio-data.json" target="_blank" rel="noreferrer">JSON</a>
+    </div>
+  </header>
+
+  <dialog id="menuDialog" class="menu-dialog">
+    <button id="closeMenu" class="dialog-close" type="button" aria-label="Cerrar menu">x</button>
+    <div class="menu-panel">
+      <div class="menu-brand">
+        <span class="logo-mark">TCG</span>
+        <div>
+          <strong>Mi Coleccion TCGs</strong>
+          <small>Navegacion principal</small>
+        </div>
+      </div>
+      <nav class="menu-nav" aria-label="Navegacion principal">
+        <a href="#dashboard" class="menu-link active">Dashboard</a>
+        <a href="#watchlist" class="menu-link">Radar</a>
+        <a href="#analytics" class="menu-link">Analisis</a>
+        <a href="#collection" class="menu-link">Coleccion</a>
+        <a href="#review" class="menu-link">Revision</a>
+        <a href="#pipeline" class="menu-link">Pipeline</a>
+      </nav>
+      <div class="menu-meta-card">
+        <span>Actualizado</span>
+        <strong id="menuUpdatedAt">Pendiente</strong>
+      </div>
+    </div>
+  </dialog>
+
+  <main class="main-shell">
+    <section id="dashboard" class="hero-section section-anchor">
+      <div class="hero-copy">
+        <p class="eyebrow">Portfolio intelligence</p>
+        <h1>Mi Coleccion TCGs</h1>
+        <p class="hero-subtitle">Vista estatica para GitHub Pages con KPIs, filtros, paginacion, graficos y detalle de cartas desde portfolio-data.</p>
+        <div class="hero-actions">
+          <a class="primary-action" href="#collection">Ver coleccion</a>
+          <button id="imageLookupButton" class="secondary-action" type="button">Resolver imagenes visibles</button>
+        </div>
+        <p id="imageLookupStatus" class="lookup-status"></p>
+      </div>
+
+      <aside class="hero-card">
+        <div class="hero-card-header">
+          <span>Estado del dataset</span>
+          <strong id="heroDatasetState">Cargando</strong>
+        </div>
+        <div class="hero-stats">
+          <div><strong id="heroRows">0</strong><span>Filas</span></div>
+          <div><strong id="heroEditions">0</strong><span>Ediciones</span></div>
+          <div><strong id="heroTcg">0</strong><span>TCGs</span></div>
+        </div>
+      </aside>
+    </section>
+
+    <section class="summary-box" aria-label="KPIs principales">
+      <article class="summary-metric clickable" data-summary-filter="active">
+        <span>Cartas activas</span>
+        <strong id="kpiActiveUnits">0</strong>
+        <small>Holding / no canceladas</small>
+      </article>
+      <article class="summary-metric clickable" data-summary-filter="buy">
+        <span>Invertido activo</span>
+        <strong id="kpiInvestedActive">0,00 EUR</strong>
+        <small>Importe de compras vivas</small>
+      </article>
+      <article class="summary-metric clickable" data-summary-filter="sold">
+        <span>Ventas registradas</span>
+        <strong id="kpiSoldAmount">0,00 EUR</strong>
+        <small>Operaciones marcadas como venta</small>
+      </article>
+      <article class="summary-metric" id="netMetric">
+        <span>Balance operativo</span>
+        <strong id="kpiNetBalance">0,00 EUR</strong>
+        <small>Ventas - invertido activo</small>
+      </article>
+      <article class="summary-metric">
+        <span>Valor mercado</span>
+        <strong id="kpiMarketValue">Pendiente</strong>
+        <small>Cuando haya precios actuales</small>
+      </article>
+      <article class="summary-metric clickable warning" data-summary-filter="review">
+        <span>Necesitan revision</span>
+        <strong id="kpiNeedsReview">0</strong>
+        <small>Imagen o matching pendiente</small>
+      </article>
+    </section>
+
+    <section id="watchlist" class="watch-strip section-anchor">
+      <div class="strip-header">
+        <div>
+          <p class="eyebrow">Radar visual</p>
+          <h2>Cartas destacadas</h2>
+        </div>
+        <span id="watchlistCount" class="pill">0</span>
+      </div>
+      <div id="watchlistCarousel" class="watch-carousel" aria-label="Cartas destacadas"></div>
+    </section>
+
+    <section id="analytics" class="section section-anchor">
+      <div class="section-header">
+        <div>
+          <p class="eyebrow">Analisis</p>
+          <h2>Lectura rapida de la coleccion</h2>
+        </div>
+      </div>
+      <div class="analytics-grid">
+        <article class="analysis-panel wide">
+          <div class="panel-header">
+            <h3>Evolucion mensual</h3>
+            <span class="pill">Compra / venta</span>
+          </div>
+          <div id="monthlyFlow" class="timeline-chart"></div>
+        </article>
+        <article class="analysis-panel">
+          <div class="panel-header">
+            <h3>Top ediciones por cantidad</h3>
+            <span id="setCount" class="pill">0</span>
+          </div>
+          <div id="setCountBreakdown" class="bar-list"></div>
+        </article>
+        <article class="analysis-panel">
+          <div class="panel-header">
+            <h3>Top ediciones por importe</h3>
+            <span class="pill">Importe</span>
+          </div>
+          <div id="setSpendBreakdown" class="bar-list"></div>
+        </article>
+        <article class="analysis-panel">
+          <div class="panel-header">
+            <h3>Top cartas por importe</h3>
+            <span class="pill">Importe</span>
+          </div>
+          <div id="cardSpendBreakdown" class="bar-list"></div>
+        </article>
+        <article class="analysis-panel">
+          <div class="panel-header">
+            <h3>Operaciones</h3>
+            <span class="pill">Tipo</span>
+          </div>
+          <div id="operationBreakdown" class="bar-list"></div>
+        </article>
+        <article class="analysis-panel">
+          <div class="panel-header">
+            <h3>Calidad de datos</h3>
+            <span class="pill">Dataset</span>
+          </div>
+          <div id="dataHealth" class="health-grid"></div>
+        </article>
+      </div>
+    </section>
+
+    <section id="collection" class="section section-anchor">
+      <div class="section-header collection-heading">
+        <div>
+          <p class="eyebrow">Excel -> portfolio-data -> web</p>
+          <h2>Coleccion</h2>
+        </div>
+        <div id="resultCount" class="result-count">0 resultados</div>
+      </div>
+
+      <div class="collection-controls">
+        <input id="searchInput" type="search" placeholder="Buscar carta, edicion, idioma, TCG, numero..." />
+        <select id="setFilter"><option value="">Todas las ediciones</option></select>
+        <select id="tcgFilter"><option value="">Todos los TCG</option></select>
+        <select id="languageFilter"><option value="">Todos los idiomas</option></select>
+        <select id="statusFilter"><option value="">Todos los estados</option></select>
+        <select id="operationFilter"><option value="">Todas las operaciones</option></select>
+        <select id="conditionFilter"><option value="">Todas las condiciones</option></select>
+      </div>
+
+      <div class="quick-tabs" role="tablist" aria-label="Filtros rapidos">
+        <button class="filter-chip active" data-tab="all" type="button">Todo</button>
+        <button class="filter-chip" data-tab="active" type="button">Activo</button>
+        <button class="filter-chip" data-tab="Holding" type="button">Holding</button>
+        <button class="filter-chip" data-tab="Sold" type="button">Vendido</button>
+        <button class="filter-chip" data-tab="Cancelado" type="button">Cancelado</button>
+        <button class="filter-chip" data-tab="review" type="button">Revision</button>
+      </div>
+
+      <div class="collection-toolbar">
+        <label>
+          <span>Orden</span>
+          <select id="sortSelect">
+            <option value="date">Fecha</option>
+            <option value="totalBuyPrice">Importe total</option>
+            <option value="buyPrice">Precio unidad</option>
+            <option value="currentPrice">Precio mercado</option>
+            <option value="name">Nombre</option>
+            <option value="set">Edicion</option>
+            <option value="qty">Cantidad</option>
+            <option value="status">Estado</option>
+            <option value="language">Idioma</option>
+            <option value="tcg">TCG</option>
+          </select>
+        </label>
+        <button id="sortDirButton" class="tool-button" type="button">Desc</button>
+        <label>
+          <span>Por pagina</span>
+          <select id="pageSizeSelect">
+            <option value="10">10</option>
+            <option value="20" selected>20</option>
+            <option value="50">50</option>
+            <option value="200">200</option>
+          </select>
+        </label>
+        <div class="pager" aria-label="Paginacion">
+          <button id="prevPage" class="tool-button" type="button">Anterior</button>
+          <span id="pageInfo" class="page-info">Pagina 1 de 1</span>
+          <button id="nextPage" class="tool-button" type="button">Siguiente</button>
+        </div>
+      </div>
+
+      <div id="cardsGrid" class="card-grid"></div>
+      <div id="emptyState" class="empty-state hidden">
+        <h3>No hay cartas para mostrar</h3>
+        <p>Ajusta los filtros o la busqueda.</p>
+      </div>
+    </section>
+
+    <section id="review" class="section section-anchor">
+      <div class="section-header">
+        <div>
+          <p class="eyebrow">Control de calidad</p>
+          <h2>Elementos a revisar</h2>
+        </div>
+      </div>
+      <div class="table-panel">
+        <table>
+          <thead>
+            <tr>
+              <th>Carta</th>
+              <th>Edicion</th>
+              <th>Idioma</th>
+              <th>Motivo</th>
+              <th>Fila Excel</th>
+            </tr>
+          </thead>
+          <tbody id="reviewTableBody"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="pipeline" class="section section-anchor">
+      <div class="section-header">
+        <div>
+          <p class="eyebrow">Automatizacion</p>
+          <h2>Pipeline estatico</h2>
+        </div>
+      </div>
+      <div class="pipeline-grid">
+        <article><span>1</span><strong>Excel</strong><p>Fuente de verdad manual.</p></article>
+        <article><span>2</span><strong>portfolio-data.json</strong><p>Datos normalizados y auditables.</p></article>
+        <article><span>3</span><strong>portfolio-data.js</strong><p>Datos disponibles para el navegador.</p></article>
+        <article><span>4</span><strong>GitHub Pages</strong><p>Publicacion estatica desde docs.</p></article>
+      </div>
+      <pre class="code-block">docs/
+  data/
+    portfolio-data.js
+    portfolio-data.json
+  app.js
+  index.html
+  styles.css</pre>
+    </section>
+  </main>
+
+  <dialog id="cardModal" class="card-modal">
+    <button id="closeModal" class="dialog-close" type="button" aria-label="Cerrar">x</button>
+    <div id="modalBody"></div>
+  </dialog>
+
+  <dialog id="metricsDialog" class="metrics-dialog">
+    <button id="closeMetrics" class="dialog-close" type="button" aria-label="Cerrar">x</button>
+    <div class="metrics-modal-body">
+      <p class="eyebrow">Desglose</p>
+      <h3 id="metricsTitle">Detalle</h3>
+      <div id="metricsBody"></div>
+    </div>
+  </dialog>
+
+  <script src="./data/portfolio-data.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>
