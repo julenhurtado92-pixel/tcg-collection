@@ -23,7 +23,7 @@ from dataclasses import dataclass, field
 from datetime import datetime, timezone
 from difflib import SequenceMatcher
 from pathlib import Path
-from typing import Any, Dict, Iterable, List, Optional, Tuple
+from typing import Any, Dict, Iterable, List, Optional, Tuple, Set
 
 BASE_DOWNLOAD = "https://downloads.s3.cardmarket.com/productCatalog"
 
@@ -353,6 +353,55 @@ class CardmarketCatalog:
         self.products_by_id: Dict[int, CatalogProduct] = {}
         self.price_by_id: Dict[int, Dict[str, Any]] = {}
         self.downloaded: Dict[str, Any] = {}
+        self.name_index: Dict[str, Dict[str, List[CatalogProduct]]] = {slug: {} for slug in GAMES}
+        self.token_index: Dict[str, Dict[str, List[CatalogProduct]]] = {slug: {} for slug in GAMES}
+
+    def build_indexes(self) -> None:
+        self.name_index = {slug: {} for slug in GAMES}
+        self.token_index = {slug: {} for slug in GAMES}
+        for slug, products in self.products_by_game.items():
+            for product in products:
+                name_key = norm_key(product.name)
+                if name_key:
+                    self.name_index.setdefault(slug, {}).setdefault(name_key, []).append(product)
+                text_for_tokens = f"{product.name} {product.expansion_name} {product.category_name}"
+                for token in tokens(text_for_tokens):
+                    if len(token) >= 3:
+                        self.token_index.setdefault(slug, {}).setdefault(token, []).append(product)
+
+    def search_candidates(self, item: Dict[str, Any], slug: str, *, limit: int = 900) -> List[CatalogProduct]:
+        item_name = text(item.get("cardName") or item.get("name"))
+        item_edition = text(item.get("edition"))
+        exact_key = norm_key(item_name)
+        candidates: Dict[int, CatalogProduct] = {}
+
+        for product in self.name_index.get(slug, {}).get(exact_key, []):
+            candidates[product.id_product] = product
+
+        query_tokens = [tok for tok in tokens(f"{item_name} {item_edition}") if len(tok) >= 3]
+        for tok in query_tokens:
+            for product in self.token_index.get(slug, {}).get(tok, []):
+                candidates[product.id_product] = product
+
+        if not candidates:
+            return []
+
+        # Prefiltro barato: evita calcular SequenceMatcher contra cientos de miles de productos.
+        item_name_tokens = tokens(item_name)
+        item_full_tokens = tokens(f"{item_name} {item_edition}")
+        ranked: List[Tuple[float, CatalogProduct]] = []
+        sealed = is_sealed_item(item)
+        for product in candidates.values():
+            prod_name_tokens = tokens(product.name)
+            prod_full_tokens = tokens(f"{product.name} {product.expansion_name} {product.category_name}")
+            name_overlap = len(item_name_tokens & prod_name_tokens) / max(len(item_name_tokens), 1)
+            full_overlap = len(item_full_tokens & prod_full_tokens) / max(len(item_full_tokens), 1)
+            exact_bonus = 2.0 if norm_key(product.name) == exact_key else 0.0
+            kind_bonus = 0.35 if ((sealed and product.product_kind in {"nonsingle", "accessory"}) or (not sealed and product.product_kind == "single")) else 0.0
+            price_bonus = 0.2 if product.price else 0.0
+            ranked.append((name_overlap * 3.0 + full_overlap + exact_bonus + kind_bonus + price_bonus, product))
+        ranked.sort(key=lambda row: row[0], reverse=True)
+        return [product for _, product in ranked[:limit]]
 
     def add_prices(self, payload: Any) -> None:
         for entry in recursive_lists_with_idproduct(payload):
@@ -412,6 +461,8 @@ def load_cardmarket_catalog(slugs: Iterable[str], cache_dir: Path, force_downloa
                 kind = "accessory" if "accessories" in label else ("single" if "singles" in label and "nonsingles" not in label else "nonsingle")
                 catalog.add_products(slug, kind, payload)
     catalog.attach_prices()
+    catalog.build_indexes()
+    log("Indices de búsqueda construidos")
     return catalog
 
 
@@ -626,13 +677,21 @@ def match_item(
     slug = game_slug_for_tcg(item.get("tcg"), item)
     candidate_pools: List[CatalogProduct] = []
     if slug in catalog.products_by_game:
-        candidate_pools.extend(catalog.products_by_game.get(slug, []))
+        candidate_pools.extend(catalog.search_candidates(item, slug))
     # Accessories como pool adicional para productos que parezcan accesorios.
     if is_sealed_item(item) and slug != "accessories":
-        candidate_pools.extend(catalog.products_by_game.get("accessories", []))
+        candidate_pools.extend(catalog.search_candidates(item, "accessories", limit=350))
+
+    # Deduplicado conservando el orden de prioridad del pre-filtro.
+    seen_candidate_ids: Set[int] = set()
+    unique_candidate_pools: List[CatalogProduct] = []
+    for product in candidate_pools:
+        if product.id_product not in seen_candidate_ids:
+            unique_candidate_pools.append(product)
+            seen_candidate_ids.add(product.id_product)
 
     scored: List[Tuple[float, CatalogProduct, List[str]]] = []
-    for product in candidate_pools:
+    for product in unique_candidate_pools:
         score, reasons = candidate_score(item, product)
         if score >= 25:
             scored.append((score, product, reasons))
@@ -683,7 +742,13 @@ def update_collection_items(
     updated_items: List[Dict[str, Any]] = []
     report_rows: List[Dict[str, Any]] = []
 
-    for item in items:
+    total_items = len(items)
+    if total_items:
+        log(f"Cruzando {'wishlist' if wishlist else 'coleccion'}: {total_items} elementos")
+
+    for index, item in enumerate(items, start=1):
+        if index == 1 or index % 25 == 0 or index == total_items:
+            log(f"Matching {'wishlist' if wishlist else 'coleccion'}: {index}/{total_items}")
         item_id = text(item.get("id"))
         market, candidates = match_item(item, catalog, overrides, min_confidence=min_confidence, wishlist=wishlist)
         quantity = to_number(item.get("quantity")) or 0
