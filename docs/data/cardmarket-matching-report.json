@@ -1,0 +1,10 @@
+{
+  "metadata": {
+    "source": "Cardmarket Data Tables",
+    "generatedAt": null,
+    "note": "Ejecuta scripts/update_cardmarket_prices.py para generar el reporte de matching."
+  },
+  "summary": {},
+  "wishlistSummary": {},
+  "rows": []
+}
