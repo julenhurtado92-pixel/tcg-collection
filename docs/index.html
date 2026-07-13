@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mi Colección TCGs</title>
+  <meta name="description" content="Inventario actual de colección TCG con stock agrupado, wishlist y análisis de gasto." />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div id="menuBackdrop" class="menu-backdrop" hidden></div>
+
+  <header class="site-header">
+    <button id="menuToggle" class="icon-button menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <a class="brand" href="#resumen" data-section-link="summary" aria-label="Ir al resumen">
+      <span class="brand-mark">TCG</span>
+      <span>
+        <strong>Mi Colección TCGs</strong>
+        <small>Inventario, ventas y wishlist</small>
+      </span>
+    </a>
+    <div class="header-actions">
+      <button id="quickExport" class="ghost-button desktop-only" type="button">Exportar datos</button>
+      <button id="themeToggle" class="ghost-button" type="button" aria-label="Cambiar modo claro u oscuro">Modo</button>
+    </div>
+  </header>
+
+  <aside id="sideMenu" class="side-menu" aria-hidden="true">
+    <div class="side-menu-head">
+      <div class="menu-brand">
+        <span class="brand-mark">TCG</span>
+        <div>
+          <strong>Mi Colección TCGs</strong>
+          <small id="menuUpdatedAt">Actualización cargada</small>
+        </div>
+      </div>
+      <button id="closeMenu" class="icon-button close-button" type="button" aria-label="Cerrar menú">×</button>
+    </div>
+    <nav class="menu-nav" aria-label="Secciones">
+      <button class="menu-link active" type="button" data-section-target="summary">Resumen ejecutivo</button>
+      <button class="menu-link" type="button" data-section-target="collection">Colección</button>
+      <button class="menu-link" type="button" data-section-target="charts">Gráficos</button>
+      <button class="menu-link" type="button" data-section-target="wishlist">Wish List</button>
+      <button class="menu-link" type="button" data-section-target="addItem">Añadir elemento</button>
+    </nav>
+    <div class="side-menu-foot">
+      <button id="menuExportPortfolio" class="primary-action full-width" type="button">Exportar colección</button>
+      <button id="menuExportWishlist" class="secondary-action full-width" type="button">Exportar Wish List</button>
+    </div>
+  </aside>
+
+  <main class="main-shell">
+    <section id="summary" class="app-section active" aria-labelledby="summaryTitle">
+      <div class="hero-section">
+        <div class="hero-copy">
+          <p class="eyebrow">Resumen ejecutivo</p>
+          <h1 id="summaryTitle">Inventario actual de la colección</h1>
+          <p class="hero-subtitle">Vista agrupada por carta/producto, edición, idioma y variante. Las ventas del Excel ya están descontadas para mostrar únicamente el stock en posesión.</p>
+          <div class="hero-actions">
+            <button class="primary-action" type="button" data-section-target="collection">Ver colección</button>
+            <button class="secondary-action" type="button" data-section-target="charts">Ver gráficos</button>
+          </div>
+        </div>
+        <aside class="hero-card lift-card">
+          <span class="hero-label">Valor actual estimado a coste</span>
+          <strong id="heroValue">0€</strong>
+          <small id="heroMeta">0 elementos · 0 unidades</small>
+        </aside>
+      </div>
+
+      <div class="summary-box" aria-label="Indicadores principales">
+        <button class="summary-metric" data-summary-metric="items" type="button">
+          <span>Elementos</span><strong id="metricItems">0</strong><small>agrupados</small>
+        </button>
+        <button class="summary-metric" data-summary-metric="units" type="button">
+          <span>Unidades</span><strong id="metricUnits">0</strong><small>en stock</small>
+        </button>
+        <button class="summary-metric" data-summary-metric="current" type="button">
+          <span>Coste actual</span><strong id="metricCurrentValue">0€</strong><small>stock visible</small>
+        </button>
+        <button class="summary-metric" data-summary-metric="historical" type="button">
+          <span>Gasto histórico</span><strong id="metricHistoricalValue">0€</strong><small>compras registradas</small>
+        </button>
+        <button class="summary-metric" data-summary-metric="sales" type="button">
+          <span>Ventas imputadas</span><strong id="metricSales">0</strong><small>filas conciliadas</small>
+        </button>
+        <button class="summary-metric" data-summary-metric="wishlist" type="button">
+          <span>Wish List</span><strong id="metricWishlist">0</strong><small>objetivos</small>
+        </button>
+      </div>
+
+      <div class="analytics-grid compact">
+        <article class="analysis-panel lift-card">
+          <h2>Distribución por TCG</h2>
+          <div id="summaryByTcg" class="bar-list"></div>
+        </article>
+        <article class="analysis-panel lift-card">
+          <h2>Top ediciones</h2>
+          <div id="summaryTopEditions" class="bar-list"></div>
+        </article>
+        <article class="analysis-panel lift-card">
+          <h2>Top elementos</h2>
+          <div id="summaryTopItems" class="bar-list"></div>
+        </article>
+      </div>
+    </section>
+
+    <section id="collection" class="app-section" aria-labelledby="collectionTitle">
+      <div class="section-header collection-title-row">
+        <div>
+          <p class="eyebrow">Colección</p>
+          <h1 id="collectionTitle">Elementos en stock</h1>
+        </div>
+        <div class="collection-counter"><strong id="filteredCount">0</strong><span>resultados</span></div>
+      </div>
+
+      <div class="collection-controls" aria-label="Filtros de colección">
+        <label>
+          <span>Búsqueda</span>
+          <input id="searchInput" type="search" placeholder="Carta, producto, edición…" autocomplete="off" />
+        </label>
+        <label>
+          <span>TCG</span>
+          <select id="tcgFilter"><option value="all">Todos</option></select>
+        </label>
+        <label>
+          <span>Edición</span>
+          <select id="editionFilter"><option value="all">Todas</option></select>
+        </label>
+        <label>
+          <span>Idioma</span>
+          <select id="languageFilter"><option value="all">Todos</option></select>
+        </label>
+        <label>
+          <span>Variante</span>
+          <select id="variantFilter"><option value="all">Todas</option></select>
+        </label>
+        <label>
+          <span>Banda</span>
+          <select id="priceBandFilter"><option value="all">Todas</option></select>
+        </label>
+        <label>
+          <span>Orden</span>
+          <select id="sortSelect">
+            <option value="total_desc">Mayor coste actual</option>
+            <option value="unit_desc">Mayor coste unitario</option>
+            <option value="quantity_desc">Más unidades</option>
+            <option value="date_desc">Compra más reciente</option>
+            <option value="name_asc">Nombre A-Z</option>
+            <option value="edition_asc">Edición A-Z</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="collection-toolbar">
+        <div class="result-note" id="collectionNote">Stock agrupado y ventas descontadas.</div>
+        <div class="pager">
+          <button id="prevPage" class="ghost-button" type="button">Anterior</button>
+          <span id="pageInfo">Página 1/1</span>
+          <button id="nextPage" class="ghost-button" type="button">Siguiente</button>
+        </div>
+      </div>
+
+      <div id="cardsGrid" class="card-grid"></div>
+      <div id="emptyState" class="empty-state hidden">
+        <h2>No hay elementos para mostrar</h2>
+        <p>Ajusta la búsqueda o cambia los filtros seleccionados.</p>
+      </div>
+    </section>
+
+    <section id="charts" class="app-section" aria-labelledby="chartsTitle">
+      <div class="section-header">
+        <div>
+          <p class="eyebrow">Gráficos</p>
+          <h1 id="chartsTitle">Gastos mensuales y anuales</h1>
+        </div>
+        <button id="marketRefreshAll" class="secondary-action" type="button">Actualizar precios de mercado</button>
+      </div>
+
+      <div class="collection-controls chart-controls" aria-label="Filtros de gráficos">
+        <label>
+          <span>Vista</span>
+          <select id="chartMode">
+            <option value="historical">Gasto histórico</option>
+            <option value="stock">Stock actual</option>
+          </select>
+        </label>
+        <label>
+          <span>TCG</span>
+          <select id="chartTcgFilter"><option value="all">Todos</option></select>
+        </label>
+        <label>
+          <span>Edición</span>
+          <select id="chartEditionFilter"><option value="all">Todas</option></select>
+        </label>
+        <label>
+          <span>Idioma</span>
+          <select id="chartLanguageFilter"><option value="all">Todos</option></select>
+        </label>
+        <label>
+          <span>Variante</span>
+          <select id="chartVariantFilter"><option value="all">Todas</option></select>
+        </label>
+        <label>
+          <span>Banda</span>
+          <select id="chartPriceBandFilter"><option value="all">Todas</option></select>
+        </label>
+      </div>
+
+      <div class="chart-kpis">
+        <article class="mini-kpi"><span>Total filtrado</span><strong id="chartTotal">0€</strong></article>
+        <article class="mini-kpi"><span>Unidades</span><strong id="chartUnits">0</strong></article>
+        <article class="mini-kpi"><span>Registros</span><strong id="chartRows">0</strong></article>
+      </div>
+
+      <div class="analytics-grid charts-grid">
+        <article class="analysis-panel lift-card">
+          <h2>Gasto anual</h2>
+          <div id="yearlyChart" class="chart-panel"></div>
+        </article>
+        <article class="analysis-panel lift-card">
+          <h2>Gasto mensual</h2>
+          <div id="monthlyChart" class="chart-panel"></div>
+        </article>
+      </div>
+    </section>
+
+    <section id="wishlist" class="app-section" aria-labelledby="wishlistTitle">
+      <div class="section-header">
+        <div>
+          <p class="eyebrow">Wish List</p>
+          <h1 id="wishlistTitle">Objetivos de compra</h1>
+        </div>
+        <button id="exportWishlist" class="secondary-action" type="button">Exportar Wish List</button>
+      </div>
+
+      <div class="two-column-layout">
+        <form id="wishlistForm" class="form-card lift-card">
+          <h2>Añadir objetivo</h2>
+          <div class="form-grid">
+            <label><span>TCG</span><input name="tcg" list="tcgOptions" required placeholder="Magic The Gathering" /></label>
+            <label><span>Nombre</span><input name="cardName" list="nameOptions" required placeholder="Nombre de carta o producto" /></label>
+            <label><span>Edición</span><input name="edition" list="editionOptions" required placeholder="Edición" /></label>
+            <label><span>Idioma</span><input name="language" list="languageOptions" placeholder="Inglés" /></label>
+            <label><span>Variante</span><input name="variant" list="variantOptions" placeholder="Non-foil, Foil…" /></label>
+            <label><span>Unidades deseadas</span><input name="quantity" type="number" min="1" step="1" value="1" /></label>
+            <label><span>Precio objetivo</span><input name="targetPrice" type="number" min="0" step="0.01" placeholder="0,00" /></label>
+            <label><span>Prioridad</span><select name="priority"><option>Media</option><option>Alta</option><option>Baja</option></select></label>
+            <label class="full"><span>URL imagen</span><input name="imageUrl" type="url" placeholder="https://…" /></label>
+            <label class="full"><span>Notas</span><textarea name="notes" rows="3" placeholder="Condición, vendedor, rango de precio…"></textarea></label>
+          </div>
+          <button class="primary-action full-width" type="submit">Guardar en Wish List</button>
+        </form>
+
+        <article class="list-panel lift-card">
+          <div class="list-panel-head">
+            <h2>Objetivos guardados</h2>
+            <span id="wishlistCount">0</span>
+          </div>
+          <div id="wishlistList" class="wishlist-list"></div>
+        </article>
+      </div>
+    </section>
+
+    <section id="addItem" class="app-section" aria-labelledby="addItemTitle">
+      <div class="section-header">
+        <div>
+          <p class="eyebrow">Alta manual</p>
+          <h1 id="addItemTitle">Añadir elemento a la colección</h1>
+        </div>
+        <button id="exportPortfolio" class="secondary-action" type="button">Exportar colección</button>
+      </div>
+
+      <div class="two-column-layout">
+        <form id="collectionForm" class="form-card lift-card">
+          <h2>Nuevo elemento</h2>
+          <div class="form-grid">
+            <label><span>TCG</span><input name="tcg" list="tcgOptions" required placeholder="Riftbound" /></label>
+            <label><span>Nombre</span><input name="cardName" list="nameOptions" required placeholder="Carta o producto" /></label>
+            <label><span>Edición</span><input name="edition" list="editionOptions" required placeholder="Edición" /></label>
+            <label><span>Idioma</span><input name="language" list="languageOptions" placeholder="Inglés" /></label>
+            <label><span>Variante</span><input name="variant" list="variantOptions" placeholder="Non-foil, Foil…" /></label>
+            <label><span>Unidades</span><input name="quantity" type="number" min="1" step="1" value="1" required /></label>
+            <label><span>Coste unitario</span><input name="unitCost" type="number" min="10" step="0.01" required placeholder="10,00" /></label>
+            <label><span>Fecha compra</span><input name="date" type="date" /></label>
+            <label class="full"><span>URL imagen</span><input name="imageUrl" type="url" placeholder="https://…" /></label>
+            <label class="full"><span>Notas</span><textarea name="notes" rows="3" placeholder="Pedido, vendedor, estado…"></textarea></label>
+          </div>
+          <p class="form-hint">Las altas se guardan en este navegador y se incluyen al exportar el JSON.</p>
+          <button class="primary-action full-width" type="submit">Añadir a colección</button>
+        </form>
+
+        <article class="list-panel lift-card">
+          <div class="list-panel-head">
+            <h2>Altas locales</h2>
+            <span id="localItemsCount">0</span>
+          </div>
+          <div id="localItemsList" class="wishlist-list"></div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <datalist id="tcgOptions"></datalist>
+  <datalist id="nameOptions"></datalist>
+  <datalist id="editionOptions"></datalist>
+  <datalist id="languageOptions"></datalist>
+  <datalist id="variantOptions"></datalist>
+
+  <dialog id="cardModal" class="card-modal">
+    <button id="closeModal" class="dialog-close" type="button" aria-label="Cerrar detalle">×</button>
+    <div id="modalBody"></div>
+  </dialog>
+
+  <dialog id="summaryDialog" class="metrics-dialog">
+    <button id="closeSummaryDialog" class="dialog-close" type="button" aria-label="Cerrar métrica">×</button>
+    <div class="metrics-modal-body">
+      <p class="eyebrow">Detalle</p>
+      <h2 id="summaryDialogTitle">Métrica</h2>
+      <div id="summaryDialogBody"></div>
+    </div>
+  </dialog>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script src="./data/portfolio-data.js"></script>
+  <script src="./data/wishlist-data.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>
