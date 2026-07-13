@@ -1,0 +1,61 @@
+name: Actualizar precios Cardmarket
+
+on:
+  workflow_dispatch:
+    inputs:
+      min_confidence:
+        description: Confianza minima para match automatico
+        required: false
+        default: "72"
+      force_download:
+        description: Redescargar tablas aunque exista cache
+        required: false
+        default: "true"
+
+permissions:
+  contents: write
+
+jobs:
+  update-cardmarket-prices:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Actualizar precios desde Cardmarket Data Tables
+        run: |
+          FORCE_FLAG=""
+          if [ "${{ github.event.inputs.force_download }}" = "true" ]; then
+            FORCE_FLAG="--force-download"
+          fi
+          python scripts/update_cardmarket_prices.py \
+            --portfolio docs/data/portfolio-data.json \
+            --wishlist docs/data/wishlist-data.json \
+            --overrides docs/data/cardmarket-overrides.json \
+            --out docs/data \
+            --cache .cache/cardmarket \
+            --update-portfolio \
+            --update-wishlist \
+            --min-confidence "${{ github.event.inputs.min_confidence }}" \
+            $FORCE_FLAG
+
+      - name: Commit de resultados
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/data/market-prices.json docs/data/market-prices.js
+          git add docs/data/portfolio-data.json docs/data/portfolio-data.js
+          git add docs/data/wishlist-data.json docs/data/wishlist-data.js
+          git add docs/data/cardmarket-overrides.json
+          git add docs/data/cardmarket-matching-report.json docs/data/cardmarket-matching-report.csv
+          if git diff --staged --quiet; then
+            echo "No hay cambios que commitear."
+          else
+            git commit -m "Actualizar precios Cardmarket"
+            git push
+          fi
