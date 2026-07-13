@@ -17,6 +17,7 @@ import re
 import sys
 import time
 import unicodedata
+import urllib.error
 import urllib.request
 from dataclasses import dataclass, field
 from datetime import datetime, timezone
@@ -86,6 +87,10 @@ PREFERRED_PRICE_ORDER = ["trend", "avg30", "avg7", "avg1", "avg", "low", "sell"]
 
 def now_iso() -> str:
     return datetime.now(timezone.utc).replace(microsecond=0).isoformat()
+
+
+def log(message: str) -> None:
+    print(f"[{datetime.now().strftime('%H:%M:%S')}] {message}", flush=True)
 
 
 def text(value: Any) -> str:
@@ -198,10 +203,20 @@ def save_js(path: Path, global_name: str, payload: Any) -> None:
         fh.write(";\n")
 
 
-def download_json(url: str, cache_path: Path, *, force: bool = False, sleep: float = 0.2) -> Any:
+def download_json(
+    url: str,
+    cache_path: Path,
+    *,
+    force: bool = False,
+    sleep: float = 0.2,
+    timeout_seconds: int = 35,
+    retries: int = 2,
+) -> Any:
     cache_path.parent.mkdir(parents=True, exist_ok=True)
     if cache_path.exists() and not force:
+        log(f"Usando cache: {cache_path}")
         return load_json(cache_path, {})
+
     request = urllib.request.Request(
         url,
         headers={
@@ -209,13 +224,30 @@ def download_json(url: str, cache_path: Path, *, force: bool = False, sleep: flo
             "Accept": "application/json,text/json,*/*",
         },
     )
-    with urllib.request.urlopen(request, timeout=90) as response:
-        raw = response.read().decode("utf-8-sig")
-    payload = json.loads(raw)
-    save_json(cache_path, payload)
-    if sleep:
-        time.sleep(sleep)
-    return payload
+
+    last_error = None
+    for attempt in range(1, retries + 2):
+        log(f"Descargando ({attempt}/{retries + 1}): {url}")
+        try:
+            started = time.time()
+            with urllib.request.urlopen(request, timeout=timeout_seconds) as response:
+                raw_bytes = response.read()
+                status = getattr(response, "status", "?")
+            elapsed = time.time() - started
+            log(f"OK {status}: {len(raw_bytes):,} bytes en {elapsed:.1f}s")
+            raw = raw_bytes.decode("utf-8-sig")
+            payload = json.loads(raw)
+            save_json(cache_path, payload)
+            if sleep:
+                time.sleep(sleep)
+            return payload
+        except (urllib.error.URLError, urllib.error.HTTPError, TimeoutError, json.JSONDecodeError, OSError) as exc:
+            last_error = exc
+            log(f"ERROR descargando {url}: {type(exc).__name__}: {exc}")
+            if attempt <= retries:
+                time.sleep(2 * attempt)
+
+    raise RuntimeError(f"No se pudo descargar {url} tras {retries + 1} intentos. Ultimo error: {last_error}")
 
 
 def recursive_lists_with_idproduct(payload: Any) -> List[Dict[str, Any]]:
@@ -838,9 +870,9 @@ def main(argv: Optional[List[str]] = None) -> int:
 
     extra_games = [normalize(part).replace(" ", "") for part in args.games.split(",") if part.strip()]
     slugs = games_from_data(portfolio, wishlist, extra_games)
-    print(f"Descargando tablas Cardmarket para: {', '.join(slugs)}")
+    log(f"Descargando tablas Cardmarket para: {', '.join(slugs)}")
     catalog = load_cardmarket_catalog(slugs, cache_dir, force_download=args.force_download)
-    print(f"Productos cargados: {len(catalog.products_by_id):,}; price guide: {len(catalog.price_by_id):,}")
+    log(f"Productos cargados: {len(catalog.products_by_id):,}; price guide: {len(catalog.price_by_id):,}")
 
     price_items, updated_cards, report_collection = update_collection_items(
         list(portfolio.get("cards") or []), catalog, overrides, min_confidence=args.min_confidence, wishlist=False
@@ -886,13 +918,13 @@ def main(argv: Optional[List[str]] = None) -> int:
         save_json(wishlist_path, updated_wishlist)
         save_js(wishlist_path.with_suffix(".js"), "wishlistData", updated_wishlist)
 
-    print("Resumen coleccion:")
-    print(json.dumps(market_summary, ensure_ascii=False, indent=2))
+    log("Resumen coleccion:")
+    log(json.dumps(market_summary, ensure_ascii=False, indent=2))
     if wishlist_price_items:
-        print("Resumen wishlist:")
-        print(json.dumps(wishlist_summary, ensure_ascii=False, indent=2))
-    print(f"Generado: {out_dir / 'market-prices.json'}")
-    print(f"Reporte:  {out_dir / 'cardmarket-matching-report.csv'}")
+        log("Resumen wishlist:")
+        log(json.dumps(wishlist_summary, ensure_ascii=False, indent=2))
+    log(f"Generado: {out_dir / 'market-prices.json'}")
+    log(f"Reporte:  {out_dir / 'cardmarket-matching-report.csv'}")
     return 0
 
 
