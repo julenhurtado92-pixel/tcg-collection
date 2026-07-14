@@ -51,6 +51,14 @@ on:
         description: "Redescargar cache Scryfall -> Cardmarket"
         required: false
         default: "false"
+      scryfall_sleep:
+        description: "Pausa entre llamadas a Scryfall, en segundos"
+        required: false
+        default: "0.25"
+      scryfall_max_retries:
+        description: "Reintentos ante limite 429 de Scryfall"
+        required: false
+        default: "4"
 
 permissions:
   contents: write
@@ -71,6 +79,16 @@ jobs:
 
       - name: Instalar dependencias scraping
         run: python -m pip install --upgrade beautifulsoup4
+
+      - name: Restaurar cache Scryfall y scraping
+        uses: actions/cache@v4
+        with:
+          path: |
+            .cache/scryfall-cardmarket
+            .cache/cardmarket-scrape
+          key: cardmarket-v7-cache-${{ runner.os }}-${{ hashFiles('docs/data/portfolio-data.json', 'docs/data/wishlist-data.json') }}
+          restore-keys: |
+            cardmarket-v7-cache-${{ runner.os }}-
 
       - name: Actualizar precios Cardmarket V7 scrape
         run: |
@@ -106,6 +124,8 @@ jobs:
             --cache .cache/cardmarket \
             --scrape-cache .cache/cardmarket-scrape \
             --scryfall-cache .cache/scryfall-cardmarket \
+            --scryfall-sleep "${{ github.event.inputs.scryfall_sleep }}" \
+            --scryfall-max-retries "${{ github.event.inputs.scryfall_max_retries }}" \
             --update-portfolio \
             --update-wishlist \
             --min-confidence "${{ github.event.inputs.min_confidence }}" \
