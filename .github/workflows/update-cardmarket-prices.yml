@@ -34,7 +34,7 @@ on:
       max_scrape_items:
         description: "Limite de elementos scrape para pruebas. 0 = todos"
         required: false
-        default: "10"
+        default: "0"
       debug_scrape_html:
         description: "Guardar HTML bloqueado para depuracion"
         required: false
