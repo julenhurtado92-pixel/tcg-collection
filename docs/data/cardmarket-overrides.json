@@ -1,0 +1,7 @@
+{
+  "metadata": {
+    "description": "Mapeos manuales de elementos de la coleccion/wishlist a idProduct de Cardmarket. Rellena items.<id>.idProduct cuando el reporte marque una coincidencia dudosa o sin resolver."
+  },
+  "items": {},
+  "wishlistItems": {}
+}
