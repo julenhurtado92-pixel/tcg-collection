@@ -333,9 +333,10 @@ class ScryfallCardmarketConfig:
     cache_dir: Path = field(default_factory=lambda: Path(".cache/scryfall-cardmarket"))
     cache_hours: float = 24 * 14
     force: bool = False
-    sleep: float = 0.08
+    sleep: float = 0.25
     timeout_seconds: int = 30
     user_agent: str = DEFAULT_SCRYFALL_USER_AGENT
+    max_retries: int = 4
 
 
 ScryfallResolverConfig = ScryfallCardmarketConfig
@@ -1594,36 +1595,66 @@ def scryfall_cache_path(config: ScryfallResolverConfig, url: str) -> Path:
     return config.cache_dir / f"{digest}.json"
 
 
+def retry_after_seconds(headers: Any, fallback: float) -> float:
+    raw = text(headers.get("Retry-After") if hasattr(headers, "get") else "")
+    if raw:
+        try:
+            return max(0.0, min(120.0, float(raw)))
+        except ValueError:
+            pass
+    return max(0.0, min(120.0, fallback))
+
+
 def fetch_scryfall_json(url: str, config: ScryfallResolverConfig) -> Dict[str, Any]:
     cache_path = scryfall_cache_path(config, url)
     cache_path.parent.mkdir(parents=True, exist_ok=True)
     if not config.force and cache_is_fresh(cache_path, config.cache_hours):
         return load_json(cache_path, {})
 
-    request = urllib.request.Request(
-        url,
-        headers={
-            "User-Agent": text(config.user_agent or DEFAULT_SCRYFALL_USER_AGENT),
-            "Accept": "application/json;q=0.9,*/*;q=0.1",
-        },
-    )
-    try:
-        log(f"Resolviendo Cardmarket ID via Scryfall: {url}")
-        with urllib.request.urlopen(request, timeout=config.timeout_seconds) as response:
-            raw = response.read().decode("utf-8", errors="replace")
-        payload = json.loads(raw)
-        save_json(cache_path, payload)
-        if config.sleep:
-            time.sleep(config.sleep)
-        return payload if isinstance(payload, dict) else {}
-    except urllib.error.HTTPError as exc:
-        if exc.code == 404:
-            save_json(cache_path, {"object": "error", "code": "not_found"})
+    max_attempts = max(1, int(getattr(config, "max_retries", 4)) + 1)
+    for attempt in range(1, max_attempts + 1):
+        request = urllib.request.Request(
+            url,
+            headers={
+                "User-Agent": text(config.user_agent or DEFAULT_SCRYFALL_USER_AGENT),
+                "Accept": "application/json;q=0.9,*/*;q=0.1",
+            },
+        )
+        try:
+            suffix = f" intento {attempt}/{max_attempts}" if attempt > 1 else ""
+            log(f"Resolviendo Cardmarket ID via Scryfall{suffix}: {url}")
+            with urllib.request.urlopen(request, timeout=config.timeout_seconds) as response:
+                raw = response.read().decode("utf-8", errors="replace")
+            payload = json.loads(raw)
+            save_json(cache_path, payload)
+            if config.sleep:
+                time.sleep(config.sleep)
+            return payload if isinstance(payload, dict) else {}
+        except urllib.error.HTTPError as exc:
+            if exc.code == 404:
+                save_json(cache_path, {"object": "error", "code": "not_found"})
+                return {}
+
+            retryable = exc.code == 429 or 500 <= exc.code < 600
+            if retryable and attempt < max_attempts:
+                fallback_wait = max(float(getattr(config, "sleep", 0.25) or 0.25), min(30.0, 2.0 ** attempt))
+                wait_seconds = retry_after_seconds(getattr(exc, "headers", None), fallback_wait)
+                log(f"Aviso: Scryfall HTTP {exc.code}; esperando {wait_seconds:.1f}s antes de reintentar")
+                time.sleep(wait_seconds)
+                continue
+
+            if exc.code == 429:
+                config.enabled = False
+                log("Aviso: Scryfall ha devuelto 429 demasiadas veces; se desactiva el resolver Scryfall para el resto de esta ejecucion y se continua con Data Tables")
+                return {}
+
+            log(f"Aviso: Scryfall HTTP {exc.code}; se continua con Data Tables para este item")
             return {}
-        raise
-    except Exception as exc:  # noqa: BLE001 - el resolver Scryfall es auxiliar.
-        log(f"Aviso: Scryfall resolver no disponible: {type(exc).__name__}: {str(exc)[:120]}")
-        return {}
+        except Exception as exc:  # noqa: BLE001 - el resolver Scryfall es auxiliar.
+            log(f"Aviso: Scryfall resolver no disponible: {type(exc).__name__}: {str(exc)[:120]}")
+            return {}
+
+    return {}
 
 
 def scryfall_query_url_for_item(item: Dict[str, Any]) -> str:
@@ -2847,6 +2878,8 @@ def main(argv: Optional[List[str]] = None) -> int:
     parser.add_argument("--scryfall-cardmarket-match", action=argparse.BooleanOptionalAction, default=True, help="Usa Scryfall para obtener idProduct Cardmarket exacto de MTG cuando sea posible")
     parser.add_argument("--scryfall-cache", default=".cache/scryfall-cardmarket", help="Carpeta de cache para resoluciones Scryfall -> idProduct")
     parser.add_argument("--scryfall-cache-hours", type=float, default=24 * 14, help="Horas de validez de cache Scryfall")
+    parser.add_argument("--scryfall-sleep", type=float, default=0.25, help="Pausa entre llamadas a Scryfall en segundos")
+    parser.add_argument("--scryfall-max-retries", type=int, default=4, help="Reintentos ante HTTP 429/5xx de Scryfall")
     parser.add_argument("--force-scryfall-download", action="store_true", help="Redescarga resoluciones Scryfall aunque exista cache")
     parser.add_argument("--strict-matching", action=argparse.BooleanOptionalAction, default=None, help="Exige match estricto de nombre/edicion. Por defecto se activa en hybrid/scrape")
     args = parser.parse_args(argv)
@@ -2904,6 +2937,8 @@ def main(argv: Optional[List[str]] = None) -> int:
         cache_dir=Path(args.scryfall_cache),
         cache_hours=float(args.scryfall_cache_hours),
         force=bool(args.force_scryfall_download),
+        sleep=float(args.scryfall_sleep),
+        max_retries=int(args.scryfall_max_retries),
     )
     if live_config.enabled and not live_config.resolved_api_key():
         parser.error(f"--pricing-mode hybrid requiere una clave live en {live_config.api_key_env} o --live-api-key")
