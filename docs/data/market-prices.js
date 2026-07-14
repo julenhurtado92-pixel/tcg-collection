@@ -2,7 +2,7 @@ window.marketPricesData = {
   "metadata": {
     "source": "Cardmarket Data Tables + Direct Scraping",
     "pricingMode": "scrape",
-    "generatedAt": "2026-07-14T09:58:29+00:00",
+    "generatedAt": "2026-07-14T10:17:39+00:00",
     "downloaded": {
       "magic:products_singles": {
         "url": "https://downloads.s3.cardmarket.com/productCatalog/productList/products_singles_1.json",
@@ -111,7 +111,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:17+00:00",
+        "lastUpdated": "2026-07-14T10:17:26+00:00",
         "cardmarket": {
           "idProduct": 9371,
           "name": "City of Traitors",
@@ -256,7 +256,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:17+00:00",
+        "lastUpdated": "2026-07-14T10:17:26+00:00",
         "cardmarket": {
           "idProduct": 10532,
           "name": "Serra's Sanctum",
@@ -401,7 +401,7 @@ window.marketPricesData = {
         "matchConfidence": 96.16,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:18+00:00",
+        "lastUpdated": "2026-07-14T10:17:26+00:00",
         "cardmarket": {
           "idProduct": 885552,
           "name": "The Hobbit Collector Booster Box",
@@ -530,7 +530,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:18+00:00",
+        "lastUpdated": "2026-07-14T10:17:26+00:00",
         "cardmarket": {
           "idProduct": 5833,
           "name": "Underground Sea",
@@ -675,7 +675,7 @@ window.marketPricesData = {
         "matchConfidence": 142.19,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "foil_to_normal",
-        "lastUpdated": "2026-07-14T09:58:18+00:00",
+        "lastUpdated": "2026-07-14T10:17:26+00:00",
         "cardmarket": {
           "idProduct": 879290,
           "name": "Unleashed Case (6x Booster Box)",
@@ -848,7 +848,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:18+00:00",
+        "lastUpdated": "2026-07-14T10:17:26+00:00",
         "cardmarket": {
           "idProduct": 5826,
           "name": "Scrubland",
@@ -993,7 +993,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:18+00:00",
+        "lastUpdated": "2026-07-14T10:17:26+00:00",
         "cardmarket": {
           "idProduct": 825801,
           "name": "Vivi Ornitier",
@@ -1138,7 +1138,7 @@ window.marketPricesData = {
         "matchConfidence": 100.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:18+00:00",
+        "lastUpdated": "2026-07-14T10:17:26+00:00",
         "cardmarket": {
           "idProduct": 484414,
           "name": "Chrome Mox",
@@ -1283,7 +1283,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:18+00:00",
+        "lastUpdated": "2026-07-14T10:17:27+00:00",
         "cardmarket": {
           "idProduct": 242541,
           "name": "Mox Opal",
@@ -1428,7 +1428,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:18+00:00",
+        "lastUpdated": "2026-07-14T10:17:27+00:00",
         "cardmarket": {
           "idProduct": 1961,
           "name": "Wooded Foothills",
@@ -1573,7 +1573,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:18+00:00",
+        "lastUpdated": "2026-07-14T10:17:27+00:00",
         "cardmarket": {
           "idProduct": 855720,
           "name": "Badgermole Cub",
@@ -1718,7 +1718,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:18+00:00",
+        "lastUpdated": "2026-07-14T10:17:27+00:00",
         "cardmarket": {
           "idProduct": 1947,
           "name": "Flooded Strand",
@@ -1863,7 +1863,7 @@ window.marketPricesData = {
         "matchConfidence": 112.05,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "foil_to_normal",
-        "lastUpdated": "2026-07-14T09:58:18+00:00",
+        "lastUpdated": "2026-07-14T10:17:27+00:00",
         "cardmarket": {
           "idProduct": 845721,
           "name": "Origins Booster Box",
@@ -2035,7 +2035,7 @@ window.marketPricesData = {
         "matchConfidence": 108.83,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "foil_to_normal",
-        "lastUpdated": "2026-07-14T09:58:18+00:00",
+        "lastUpdated": "2026-07-14T10:17:27+00:00",
         "cardmarket": {
           "idProduct": 845721,
           "name": "Origins Booster Box",
@@ -2207,7 +2207,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:18+00:00",
+        "lastUpdated": "2026-07-14T10:17:27+00:00",
         "cardmarket": {
           "idProduct": 869191,
           "name": "Ocelot Pride",
@@ -2352,7 +2352,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:18+00:00",
+        "lastUpdated": "2026-07-14T10:17:27+00:00",
         "cardmarket": {
           "idProduct": 566935,
           "name": "Fury",
@@ -2497,7 +2497,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:18+00:00",
+        "lastUpdated": "2026-07-14T10:17:27+00:00",
         "cardmarket": {
           "idProduct": 1944,
           "name": "Bloodstained Mire",
@@ -2642,7 +2642,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:18+00:00",
+        "lastUpdated": "2026-07-14T10:17:27+00:00",
         "cardmarket": {
           "idProduct": 7894,
           "name": "Force of Will",
@@ -2787,7 +2787,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:18+00:00",
+        "lastUpdated": "2026-07-14T10:17:27+00:00",
         "cardmarket": {
           "idProduct": 771603,
           "name": "Phlage, Titan of Fire's Fury",
@@ -2932,7 +2932,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:18+00:00",
+        "lastUpdated": "2026-07-14T10:17:27+00:00",
         "cardmarket": {
           "idProduct": 566638,
           "name": "Ragavan, Nimble Pilferer",
@@ -3077,7 +3077,7 @@ window.marketPricesData = {
         "matchConfidence": 100.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:18+00:00",
+        "lastUpdated": "2026-07-14T10:17:27+00:00",
         "cardmarket": {
           "idProduct": 251220,
           "name": "Swords to Plowshares",
@@ -3222,7 +3222,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:18+00:00",
+        "lastUpdated": "2026-07-14T10:17:27+00:00",
         "cardmarket": {
           "idProduct": 8805,
           "name": "Intuition",
@@ -3367,7 +3367,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:18+00:00",
+        "lastUpdated": "2026-07-14T10:17:27+00:00",
         "cardmarket": {
           "idProduct": 701676,
           "name": "The One Ring",
@@ -3512,7 +3512,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:18+00:00",
+        "lastUpdated": "2026-07-14T10:17:27+00:00",
         "cardmarket": {
           "idProduct": 566529,
           "name": "Solitude",
@@ -3657,7 +3657,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:18+00:00",
+        "lastUpdated": "2026-07-14T10:17:27+00:00",
         "cardmarket": {
           "idProduct": 566828,
           "name": "Endurance",
@@ -3802,7 +3802,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:18+00:00",
+        "lastUpdated": "2026-07-14T10:17:27+00:00",
         "cardmarket": {
           "idProduct": 664916,
           "name": "Force of Negation",
@@ -3947,7 +3947,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:18+00:00",
+        "lastUpdated": "2026-07-14T10:17:27+00:00",
         "cardmarket": {
           "idProduct": 564660,
           "name": "Scalding Tarn",
@@ -4092,7 +4092,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:18+00:00",
+        "lastUpdated": "2026-07-14T10:17:27+00:00",
         "cardmarket": {
           "idProduct": 564659,
           "name": "Misty Rainforest",
@@ -4237,7 +4237,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:18+00:00",
+        "lastUpdated": "2026-07-14T10:17:27+00:00",
         "cardmarket": {
           "idProduct": 374523,
           "name": "Prismatic Vista",
@@ -4382,7 +4382,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:18+00:00",
+        "lastUpdated": "2026-07-14T10:17:27+00:00",
         "cardmarket": {
           "idProduct": 715917,
           "name": "Orcish Bowmasters",
@@ -4527,7 +4527,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:18+00:00",
+        "lastUpdated": "2026-07-14T10:17:27+00:00",
         "cardmarket": {
           "idProduct": 664276,
           "name": "Wrenn and Six",
@@ -4672,7 +4672,7 @@ window.marketPricesData = {
         "matchConfidence": 161.03,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "foil_to_normal",
-        "lastUpdated": "2026-07-14T09:58:19+00:00",
+        "lastUpdated": "2026-07-14T10:17:27+00:00",
         "cardmarket": {
           "idProduct": 847425,
           "name": "Baited Hook",
@@ -4846,7 +4846,7 @@ window.marketPricesData = {
         "matchConfidence": 100.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:19+00:00",
+        "lastUpdated": "2026-07-14T10:17:28+00:00",
         "cardmarket": {
           "idProduct": 267262,
           "name": "Stifle",
@@ -4991,7 +4991,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:19+00:00",
+        "lastUpdated": "2026-07-14T10:17:28+00:00",
         "cardmarket": {
           "idProduct": 759800,
           "name": "Psychic Frog",
@@ -5136,7 +5136,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:19+00:00",
+        "lastUpdated": "2026-07-14T10:17:28+00:00",
         "cardmarket": {
           "idProduct": 824353,
           "name": "Sephiroth, Fabled SOLDIER // Sephiroth, One-Winged Angel",
@@ -5280,7 +5280,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:19+00:00",
+        "lastUpdated": "2026-07-14T10:17:28+00:00",
         "cardmarket": {
           "idProduct": 1959,
           "name": "Windswept Heath",
@@ -5424,7 +5424,7 @@ window.marketPricesData = {
         "categoryName": null,
         "matchConfidence": 0,
         "matchReason": "edicion_no_confirmada",
-        "lastUpdated": "2026-07-14T09:58:19+00:00",
+        "lastUpdated": "2026-07-14T10:17:28+00:00",
         "candidates": [
           {
             "idProduct": 9075,
@@ -5595,7 +5595,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:19+00:00",
+        "lastUpdated": "2026-07-14T10:17:28+00:00",
         "cardmarket": {
           "idProduct": 495990,
           "name": "Sea Gate Restoration // Sea Gate, Reborn",
@@ -5740,7 +5740,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:19+00:00",
+        "lastUpdated": "2026-07-14T10:17:28+00:00",
         "cardmarket": {
           "idProduct": 789094,
           "name": "Overlord of the Balemurk",
@@ -5884,7 +5884,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:19+00:00",
+        "lastUpdated": "2026-07-14T10:17:28+00:00",
         "cardmarket": {
           "idProduct": 22178,
           "name": "Stoneforge Mystic",
@@ -6028,7 +6028,7 @@ window.marketPricesData = {
         "categoryName": null,
         "matchConfidence": 0,
         "matchReason": "edicion_no_confirmada",
-        "lastUpdated": "2026-07-14T09:58:19+00:00",
+        "lastUpdated": "2026-07-14T10:17:28+00:00",
         "candidates": [
           {
             "idProduct": 771207,
@@ -6199,7 +6199,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:19+00:00",
+        "lastUpdated": "2026-07-14T10:17:28+00:00",
         "cardmarket": {
           "idProduct": 564645,
           "name": "Urza's Saga",
@@ -6344,7 +6344,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:19+00:00",
+        "lastUpdated": "2026-07-14T10:17:28+00:00",
         "cardmarket": {
           "idProduct": 772232,
           "name": "Nadu, Winged Wisdom",
@@ -6489,7 +6489,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:19+00:00",
+        "lastUpdated": "2026-07-14T10:17:28+00:00",
         "cardmarket": {
           "idProduct": 607021,
           "name": "Boseiju, Who Endures",
@@ -6634,7 +6634,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:19+00:00",
+        "lastUpdated": "2026-07-14T10:17:28+00:00",
         "cardmarket": {
           "idProduct": 768041,
           "name": "Nethergoyf",
@@ -6779,7 +6779,7 @@ window.marketPricesData = {
         "matchConfidence": 152.52,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "foil_to_normal",
-        "lastUpdated": "2026-07-14T09:58:19+00:00",
+        "lastUpdated": "2026-07-14T10:17:28+00:00",
         "cardmarket": {
           "idProduct": 866786,
           "name": "Irelia, Fervent",
@@ -6951,7 +6951,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:19+00:00",
+        "lastUpdated": "2026-07-14T10:17:28+00:00",
         "cardmarket": {
           "idProduct": 10715,
           "name": "Replenish",
@@ -7096,7 +7096,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:19+00:00",
+        "lastUpdated": "2026-07-14T10:17:28+00:00",
         "cardmarket": {
           "idProduct": 564661,
           "name": "Verdant Catacombs",
@@ -7241,7 +7241,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:19+00:00",
+        "lastUpdated": "2026-07-14T10:17:28+00:00",
         "cardmarket": {
           "idProduct": 565729,
           "name": "Grief",
@@ -7386,7 +7386,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:19+00:00",
+        "lastUpdated": "2026-07-14T10:17:28+00:00",
         "cardmarket": {
           "idProduct": 693230,
           "name": "Atraxa, Grand Unifier",
@@ -7530,7 +7530,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:19+00:00",
+        "lastUpdated": "2026-07-14T10:17:28+00:00",
         "cardmarket": {
           "idProduct": 8722,
           "name": "Null Rod",
@@ -7675,7 +7675,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:19+00:00",
+        "lastUpdated": "2026-07-14T10:17:28+00:00",
         "cardmarket": {
           "idProduct": 728105,
           "name": "Agatha's Soul Cauldron",
@@ -7820,7 +7820,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:19+00:00",
+        "lastUpdated": "2026-07-14T10:17:28+00:00",
         "cardmarket": {
           "idProduct": 245344,
           "name": "Green Sun's Zenith",
@@ -7965,7 +7965,7 @@ window.marketPricesData = {
         "matchConfidence": 156.63,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "foil_to_normal",
-        "lastUpdated": "2026-07-14T09:58:19+00:00",
+        "lastUpdated": "2026-07-14T10:17:28+00:00",
         "cardmarket": {
           "idProduct": 884229,
           "name": "Diana, Scorn of the Moon",
@@ -8139,7 +8139,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:19+00:00",
+        "lastUpdated": "2026-07-14T10:17:29+00:00",
         "cardmarket": {
           "idProduct": 807828,
           "name": "Ketramose, the New Dawn",
@@ -8284,7 +8284,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:19+00:00",
+        "lastUpdated": "2026-07-14T10:17:29+00:00",
         "cardmarket": {
           "idProduct": 15145,
           "name": "Tarmogoyf",
@@ -8429,7 +8429,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:19+00:00",
+        "lastUpdated": "2026-07-14T10:17:29+00:00",
         "cardmarket": {
           "idProduct": 9019,
           "name": "Lotus Petal",
@@ -8574,7 +8574,7 @@ window.marketPricesData = {
         "matchConfidence": 100.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:20+00:00",
+        "lastUpdated": "2026-07-14T10:17:29+00:00",
         "cardmarket": {
           "idProduct": 778673,
           "name": "Narset, Parter of Veils",
@@ -8719,7 +8719,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:20+00:00",
+        "lastUpdated": "2026-07-14T10:17:29+00:00",
         "cardmarket": {
           "idProduct": 768037,
           "name": "Flare of Denial",
@@ -8864,7 +8864,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:20+00:00",
+        "lastUpdated": "2026-07-14T10:17:29+00:00",
         "cardmarket": {
           "idProduct": 772152,
           "name": "Necrodominance",
@@ -9009,7 +9009,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:20+00:00",
+        "lastUpdated": "2026-07-14T10:17:29+00:00",
         "cardmarket": {
           "idProduct": 11697,
           "name": "Rishadan Port",
@@ -9154,7 +9154,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:20+00:00",
+        "lastUpdated": "2026-07-14T10:17:29+00:00",
         "cardmarket": {
           "idProduct": 564657,
           "name": "Arid Mesa",
@@ -9299,7 +9299,7 @@ window.marketPricesData = {
         "matchConfidence": 100.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:20+00:00",
+        "lastUpdated": "2026-07-14T10:17:29+00:00",
         "cardmarket": {
           "idProduct": 251221,
           "name": "Hypnotic Specter",
@@ -9444,7 +9444,7 @@ window.marketPricesData = {
         "matchConfidence": 100.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:20+00:00",
+        "lastUpdated": "2026-07-14T10:17:29+00:00",
         "cardmarket": {
           "idProduct": 682908,
           "name": "Mox Amber",
@@ -9589,7 +9589,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:20+00:00",
+        "lastUpdated": "2026-07-14T10:17:29+00:00",
         "cardmarket": {
           "idProduct": 802789,
           "name": "Emrakul, the Promised End",
@@ -9734,7 +9734,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:20+00:00",
+        "lastUpdated": "2026-07-14T10:17:29+00:00",
         "cardmarket": {
           "idProduct": 542796,
           "name": "Chalice of the Void",
@@ -9878,7 +9878,7 @@ window.marketPricesData = {
         "categoryName": null,
         "matchConfidence": 0,
         "matchReason": "edicion_no_confirmada",
-        "lastUpdated": "2026-07-14T09:58:20+00:00",
+        "lastUpdated": "2026-07-14T10:17:29+00:00",
         "candidates": [
           {
             "idProduct": 759960,
@@ -10049,7 +10049,7 @@ window.marketPricesData = {
         "matchConfidence": 150.69,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "foil_to_normal",
-        "lastUpdated": "2026-07-14T09:58:20+00:00",
+        "lastUpdated": "2026-07-14T10:17:29+00:00",
         "cardmarket": {
           "idProduct": 884191,
           "name": "Leblanc, Deceiver",
@@ -10223,7 +10223,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:20+00:00",
+        "lastUpdated": "2026-07-14T10:17:29+00:00",
         "cardmarket": {
           "idProduct": 748650,
           "name": "Sacred Foundry",
@@ -10368,7 +10368,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:20+00:00",
+        "lastUpdated": "2026-07-14T10:17:29+00:00",
         "cardmarket": {
           "idProduct": 715938,
           "name": "Delighted Halfling",
@@ -10513,7 +10513,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:20+00:00",
+        "lastUpdated": "2026-07-14T10:17:29+00:00",
         "cardmarket": {
           "idProduct": 543991,
           "name": "Yawgmoth, Thran Physician",
@@ -10658,7 +10658,7 @@ window.marketPricesData = {
         "matchConfidence": 100.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "foil_to_normal",
-        "lastUpdated": "2026-07-14T09:58:20+00:00",
+        "lastUpdated": "2026-07-14T10:17:29+00:00",
         "cardmarket": {
           "idProduct": 802788,
           "name": "Snapcaster Mage",
@@ -10803,7 +10803,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:20+00:00",
+        "lastUpdated": "2026-07-14T10:17:29+00:00",
         "cardmarket": {
           "idProduct": 543726,
           "name": "Thoughtseize",
@@ -10948,7 +10948,7 @@ window.marketPricesData = {
         "matchConfidence": 164.6,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "foil_to_normal",
-        "lastUpdated": "2026-07-14T09:58:21+00:00",
+        "lastUpdated": "2026-07-14T10:17:29+00:00",
         "cardmarket": {
           "idProduct": 884137,
           "name": "Vex, Apathetic",
@@ -11121,7 +11121,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:21+00:00",
+        "lastUpdated": "2026-07-14T10:17:29+00:00",
         "cardmarket": {
           "idProduct": 771607,
           "name": "Wrath of the Skies",
@@ -11266,7 +11266,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:21+00:00",
+        "lastUpdated": "2026-07-14T10:17:30+00:00",
         "cardmarket": {
           "idProduct": 771935,
           "name": "Ugin's Labyrinth",
@@ -11411,7 +11411,7 @@ window.marketPricesData = {
         "matchConfidence": 176.22,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "foil_to_normal",
-        "lastUpdated": "2026-07-14T09:58:21+00:00",
+        "lastUpdated": "2026-07-14T10:17:30+00:00",
         "cardmarket": {
           "idProduct": 866993,
           "name": "Irelia, Blade Dancer",
@@ -11584,7 +11584,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:21+00:00",
+        "lastUpdated": "2026-07-14T10:17:30+00:00",
         "cardmarket": {
           "idProduct": 566162,
           "name": "Subtlety",
@@ -11729,7 +11729,7 @@ window.marketPricesData = {
         "matchConfidence": 100.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:21+00:00",
+        "lastUpdated": "2026-07-14T10:17:30+00:00",
         "cardmarket": {
           "idProduct": 778692,
           "name": "Teferi, Time Raveler",
@@ -11874,7 +11874,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:21+00:00",
+        "lastUpdated": "2026-07-14T10:17:30+00:00",
         "cardmarket": {
           "idProduct": 284318,
           "name": "Ulamog, the Ceaseless Hunger",
@@ -12019,7 +12019,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:21+00:00",
+        "lastUpdated": "2026-07-14T10:17:30+00:00",
         "cardmarket": {
           "idProduct": 254452,
           "name": "Cavern of Souls",
@@ -12164,7 +12164,7 @@ window.marketPricesData = {
         "matchConfidence": 100.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:21+00:00",
+        "lastUpdated": "2026-07-14T10:17:30+00:00",
         "cardmarket": {
           "idProduct": 251283,
           "name": "Wrath of God",
@@ -12309,7 +12309,7 @@ window.marketPricesData = {
         "matchConfidence": 150.78,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "foil_to_normal",
-        "lastUpdated": "2026-07-14T09:58:21+00:00",
+        "lastUpdated": "2026-07-14T10:17:30+00:00",
         "cardmarket": {
           "idProduct": 884185,
           "name": "Vex, Gloomist",
@@ -12483,7 +12483,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:21+00:00",
+        "lastUpdated": "2026-07-14T10:17:30+00:00",
         "cardmarket": {
           "idProduct": 607391,
           "name": "Fable of the Mirror-Breaker // Reflection of Kiki-Jiki",
@@ -12628,7 +12628,7 @@ window.marketPricesData = {
         "matchConfidence": 163.82,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "foil_to_normal",
-        "lastUpdated": "2026-07-14T09:58:21+00:00",
+        "lastUpdated": "2026-07-14T10:17:30+00:00",
         "cardmarket": {
           "idProduct": 866945,
           "name": "Arise!",
@@ -12802,7 +12802,7 @@ window.marketPricesData = {
         "matchConfidence": 100.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:21+00:00",
+        "lastUpdated": "2026-07-14T10:17:30+00:00",
         "cardmarket": {
           "idProduct": 771298,
           "name": "Esper Sentinel",
@@ -12947,7 +12947,7 @@ window.marketPricesData = {
         "matchConfidence": 164.52,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "foil_to_normal",
-        "lastUpdated": "2026-07-14T09:58:21+00:00",
+        "lastUpdated": "2026-07-14T10:17:30+00:00",
         "cardmarket": {
           "idProduct": 884190,
           "name": "Moonfall",
@@ -13121,7 +13121,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:21+00:00",
+        "lastUpdated": "2026-07-14T10:17:30+00:00",
         "cardmarket": {
           "idProduct": 864877,
           "name": "Hexing Squelcher",
@@ -13266,7 +13266,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:21+00:00",
+        "lastUpdated": "2026-07-14T10:17:30+00:00",
         "cardmarket": {
           "idProduct": 1659,
           "name": "Exalted Angel",
@@ -13411,7 +13411,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:21+00:00",
+        "lastUpdated": "2026-07-14T10:17:30+00:00",
         "cardmarket": {
           "idProduct": 494919,
           "name": "Scalding Tarn",
@@ -13556,7 +13556,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:21+00:00",
+        "lastUpdated": "2026-07-14T10:17:30+00:00",
         "cardmarket": {
           "idProduct": 566852,
           "name": "Dauthi Voidwalker",
@@ -13701,7 +13701,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:21+00:00",
+        "lastUpdated": "2026-07-14T10:17:30+00:00",
         "cardmarket": {
           "idProduct": 430209,
           "name": "Underworld Breach",
@@ -13846,7 +13846,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:21+00:00",
+        "lastUpdated": "2026-07-14T10:17:30+00:00",
         "cardmarket": {
           "idProduct": 788216,
           "name": "Kaito, Bane of Nightmares",
@@ -13991,7 +13991,7 @@ window.marketPricesData = {
         "matchConfidence": 174.7,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "foil_to_normal",
-        "lastUpdated": "2026-07-14T09:58:21+00:00",
+        "lastUpdated": "2026-07-14T10:17:30+00:00",
         "cardmarket": {
           "idProduct": 847517,
           "name": "Viktor, Herald of the Arcane",
@@ -14164,7 +14164,7 @@ window.marketPricesData = {
         "matchConfidence": 163.62,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "foil_to_normal",
-        "lastUpdated": "2026-07-14T09:58:21+00:00",
+        "lastUpdated": "2026-07-14T10:17:30+00:00",
         "cardmarket": {
           "idProduct": 884213,
           "name": "Lonely Poro",
@@ -14338,7 +14338,7 @@ window.marketPricesData = {
         "matchConfidence": 164.67,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "foil_to_normal",
-        "lastUpdated": "2026-07-14T09:58:21+00:00",
+        "lastUpdated": "2026-07-14T10:17:30+00:00",
         "cardmarket": {
           "idProduct": 847329,
           "name": "Sett, Brawler",
@@ -14511,7 +14511,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:21+00:00",
+        "lastUpdated": "2026-07-14T10:17:30+00:00",
         "cardmarket": {
           "idProduct": 817950,
           "name": "Ugin, Eye of the Storms",
@@ -14655,7 +14655,7 @@ window.marketPricesData = {
         "matchConfidence": 100.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:21+00:00",
+        "lastUpdated": "2026-07-14T10:17:30+00:00",
         "cardmarket": {
           "idProduct": 251379,
           "name": "Lightning Bolt",
@@ -14800,7 +14800,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:21+00:00",
+        "lastUpdated": "2026-07-14T10:17:31+00:00",
         "cardmarket": {
           "idProduct": 372131,
           "name": "Karn, the Great Creator",
@@ -14945,7 +14945,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:21+00:00",
+        "lastUpdated": "2026-07-14T10:17:31+00:00",
         "cardmarket": {
           "idProduct": 788142,
           "name": "Abhorrent Oculus",
@@ -15090,7 +15090,7 @@ window.marketPricesData = {
         "matchConfidence": 163.95,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "foil_to_normal",
-        "lastUpdated": "2026-07-14T09:58:21+00:00",
+        "lastUpdated": "2026-07-14T10:17:31+00:00",
         "cardmarket": {
           "idProduct": 866943,
           "name": "Defiant Dance",
@@ -15264,7 +15264,7 @@ window.marketPricesData = {
         "matchConfidence": 159.91,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "foil_to_normal",
-        "lastUpdated": "2026-07-14T09:58:21+00:00",
+        "lastUpdated": "2026-07-14T10:17:31+00:00",
         "cardmarket": {
           "idProduct": 872923,
           "name": "Unleashed Booster Box",
@@ -15438,7 +15438,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:21+00:00",
+        "lastUpdated": "2026-07-14T10:17:31+00:00",
         "cardmarket": {
           "idProduct": 865198,
           "name": "Wistfulness",
@@ -15583,7 +15583,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:21+00:00",
+        "lastUpdated": "2026-07-14T10:17:31+00:00",
         "cardmarket": {
           "idProduct": 294829,
           "name": "Walking Ballista",
@@ -15728,7 +15728,7 @@ window.marketPricesData = {
         "matchConfidence": 175.49,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "foil_to_normal",
-        "lastUpdated": "2026-07-14T09:58:21+00:00",
+        "lastUpdated": "2026-07-14T10:17:31+00:00",
         "cardmarket": {
           "idProduct": 866998,
           "name": "Fiora, Grand Duelist",
@@ -15902,7 +15902,7 @@ window.marketPricesData = {
         "matchConfidence": 145.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "foil_to_normal",
-        "lastUpdated": "2026-07-14T09:58:22+00:00",
+        "lastUpdated": "2026-07-14T10:17:31+00:00",
         "cardmarket": {
           "idProduct": 847437,
           "name": "Viktor, Leader",
@@ -16074,7 +16074,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:22+00:00",
+        "lastUpdated": "2026-07-14T10:17:31+00:00",
         "cardmarket": {
           "idProduct": 807285,
           "name": "Brightglass Gearhulk",
@@ -16219,7 +16219,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:22+00:00",
+        "lastUpdated": "2026-07-14T10:17:31+00:00",
         "cardmarket": {
           "idProduct": 833842,
           "name": "Quantum Riddler",
@@ -16364,7 +16364,7 @@ window.marketPricesData = {
         "matchConfidence": 100.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:22+00:00",
+        "lastUpdated": "2026-07-14T10:17:31+00:00",
         "cardmarket": {
           "idProduct": 564642,
           "name": "Marsh Flats",
@@ -16509,7 +16509,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:22+00:00",
+        "lastUpdated": "2026-07-14T10:17:31+00:00",
         "cardmarket": {
           "idProduct": 566864,
           "name": "Murktide Regent",
@@ -16654,7 +16654,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:22+00:00",
+        "lastUpdated": "2026-07-14T10:17:31+00:00",
         "cardmarket": {
           "idProduct": 768133,
           "name": "Flare of Denial",
@@ -16799,7 +16799,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:22+00:00",
+        "lastUpdated": "2026-07-14T10:17:31+00:00",
         "cardmarket": {
           "idProduct": 759782,
           "name": "Flare of Cultivation",
@@ -16944,7 +16944,7 @@ window.marketPricesData = {
         "matchConfidence": 168.21,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "foil_to_normal",
-        "lastUpdated": "2026-07-14T09:58:22+00:00",
+        "lastUpdated": "2026-07-14T10:17:31+00:00",
         "cardmarket": {
           "idProduct": 866994,
           "name": "Azir, Emperor of the Sands",
@@ -17118,7 +17118,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:22+00:00",
+        "lastUpdated": "2026-07-14T10:17:31+00:00",
         "cardmarket": {
           "idProduct": 374460,
           "name": "Force of Vigor",
@@ -17263,7 +17263,7 @@ window.marketPricesData = {
         "matchConfidence": 159.47,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "foil_to_normal",
-        "lastUpdated": "2026-07-14T09:58:22+00:00",
+        "lastUpdated": "2026-07-14T10:17:31+00:00",
         "cardmarket": {
           "idProduct": 884192,
           "name": "Mirror Image",
@@ -17437,7 +17437,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:22+00:00",
+        "lastUpdated": "2026-07-14T10:17:31+00:00",
         "cardmarket": {
           "idProduct": 374991,
           "name": "Archmage's Charm",
@@ -17582,7 +17582,7 @@ window.marketPricesData = {
         "matchConfidence": 163.56,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "foil_to_normal",
-        "lastUpdated": "2026-07-14T09:58:22+00:00",
+        "lastUpdated": "2026-07-14T10:17:31+00:00",
         "cardmarket": {
           "idProduct": 866893,
           "name": "Last Rites",
@@ -17755,7 +17755,7 @@ window.marketPricesData = {
         "categoryName": null,
         "matchConfidence": 0,
         "matchReason": "edicion_no_confirmada",
-        "lastUpdated": "2026-07-14T09:58:22+00:00",
+        "lastUpdated": "2026-07-14T10:17:32+00:00",
         "candidates": [
           {
             "idProduct": 771176,
@@ -17926,7 +17926,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:22+00:00",
+        "lastUpdated": "2026-07-14T10:17:32+00:00",
         "cardmarket": {
           "idProduct": 802787,
           "name": "Liliana of the Veil",
@@ -18071,7 +18071,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:22+00:00",
+        "lastUpdated": "2026-07-14T10:17:32+00:00",
         "cardmarket": {
           "idProduct": 824363,
           "name": "Lightning, Army of One",
@@ -18215,7 +18215,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:22+00:00",
+        "lastUpdated": "2026-07-14T10:17:32+00:00",
         "cardmarket": {
           "idProduct": 716950,
           "name": "Palantír of Orthanc",
@@ -18360,7 +18360,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:22+00:00",
+        "lastUpdated": "2026-07-14T10:17:32+00:00",
         "cardmarket": {
           "idProduct": 8971,
           "name": "Humility",
@@ -18505,7 +18505,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:22+00:00",
+        "lastUpdated": "2026-07-14T10:17:32+00:00",
         "cardmarket": {
           "idProduct": 607522,
           "name": "Otawara, Soaring City",
@@ -18650,7 +18650,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:22+00:00",
+        "lastUpdated": "2026-07-14T10:17:32+00:00",
         "cardmarket": {
           "idProduct": 7219,
           "name": "Karakas",
@@ -18795,7 +18795,7 @@ window.marketPricesData = {
         "matchConfidence": 100.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:22+00:00",
+        "lastUpdated": "2026-07-14T10:17:32+00:00",
         "cardmarket": {
           "idProduct": 773244,
           "name": "Barrowgoyf",
@@ -18940,7 +18940,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:22+00:00",
+        "lastUpdated": "2026-07-14T10:17:32+00:00",
         "cardmarket": {
           "idProduct": 566810,
           "name": "Archon of Cruelty",
@@ -19085,7 +19085,7 @@ window.marketPricesData = {
         "matchConfidence": 100.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:22+00:00",
+        "lastUpdated": "2026-07-14T10:17:32+00:00",
         "cardmarket": {
           "idProduct": 743426,
           "name": "Broadside Bombardiers",
@@ -19230,7 +19230,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:22+00:00",
+        "lastUpdated": "2026-07-14T10:17:32+00:00",
         "cardmarket": {
           "idProduct": 609369,
           "name": "The Wandering Emperor",
@@ -19375,7 +19375,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:22+00:00",
+        "lastUpdated": "2026-07-14T10:17:32+00:00",
         "cardmarket": {
           "idProduct": 269127,
           "name": "Flooded Strand",
@@ -19520,7 +19520,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:22+00:00",
+        "lastUpdated": "2026-07-14T10:17:32+00:00",
         "cardmarket": {
           "idProduct": 22160,
           "name": "Amulet of Vigor",
@@ -19665,7 +19665,7 @@ window.marketPricesData = {
         "matchConfidence": 100.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:22+00:00",
+        "lastUpdated": "2026-07-14T10:17:32+00:00",
         "cardmarket": {
           "idProduct": 662097,
           "name": "Mutavault",
@@ -19810,7 +19810,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:22+00:00",
+        "lastUpdated": "2026-07-14T10:17:32+00:00",
         "cardmarket": {
           "idProduct": 820078,
           "name": "Cori-Steel Cutter",
@@ -19955,7 +19955,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:22+00:00",
+        "lastUpdated": "2026-07-14T10:17:32+00:00",
         "cardmarket": {
           "idProduct": 292493,
           "name": "Spirebluff Canal",
@@ -20100,7 +20100,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:22+00:00",
+        "lastUpdated": "2026-07-14T10:17:32+00:00",
         "cardmarket": {
           "idProduct": 494589,
           "name": "Omnath, Locus of Creation",
@@ -20245,7 +20245,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:22+00:00",
+        "lastUpdated": "2026-07-14T10:17:32+00:00",
         "cardmarket": {
           "idProduct": 697961,
           "name": "Faerie Mastermind",
@@ -20390,7 +20390,7 @@ window.marketPricesData = {
         "matchConfidence": 164.08,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "foil_to_normal",
-        "lastUpdated": "2026-07-14T09:58:22+00:00",
+        "lastUpdated": "2026-07-14T10:17:32+00:00",
         "cardmarket": {
           "idProduct": 884097,
           "name": "Elder Dragon",
@@ -20563,7 +20563,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:22+00:00",
+        "lastUpdated": "2026-07-14T10:17:32+00:00",
         "cardmarket": {
           "idProduct": 664922,
           "name": "Aether Vial",
@@ -20708,7 +20708,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:22+00:00",
+        "lastUpdated": "2026-07-14T10:17:32+00:00",
         "cardmarket": {
           "idProduct": 743046,
           "name": "Tishana's Tidebinder",
@@ -20853,7 +20853,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:23+00:00",
+        "lastUpdated": "2026-07-14T10:17:32+00:00",
         "cardmarket": {
           "idProduct": 11535,
           "name": "Snuff Out",
@@ -20998,7 +20998,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:23+00:00",
+        "lastUpdated": "2026-07-14T10:17:32+00:00",
         "cardmarket": {
           "idProduct": 250553,
           "name": "Snapcaster Mage",
@@ -21143,7 +21143,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:23+00:00",
+        "lastUpdated": "2026-07-14T10:17:32+00:00",
         "cardmarket": {
           "idProduct": 13854,
           "name": "Gemstone Caverns",
@@ -21288,7 +21288,7 @@ window.marketPricesData = {
         "matchConfidence": 100.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:23+00:00",
+        "lastUpdated": "2026-07-14T10:17:32+00:00",
         "cardmarket": {
           "idProduct": 685404,
           "name": "Shark Typhoon",
@@ -21433,7 +21433,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:23+00:00",
+        "lastUpdated": "2026-07-14T10:17:33+00:00",
         "cardmarket": {
           "idProduct": 374505,
           "name": "Silent Clearing",
@@ -21578,7 +21578,7 @@ window.marketPricesData = {
         "matchConfidence": 100.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:23+00:00",
+        "lastUpdated": "2026-07-14T10:17:33+00:00",
         "cardmarket": {
           "idProduct": 319045,
           "name": "Decree of Justice",
@@ -21723,7 +21723,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:23+00:00",
+        "lastUpdated": "2026-07-14T10:17:33+00:00",
         "cardmarket": {
           "idProduct": 820026,
           "name": "Voice of Victory",
@@ -21868,7 +21868,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:23+00:00",
+        "lastUpdated": "2026-07-14T10:17:33+00:00",
         "cardmarket": {
           "idProduct": 290132,
           "name": "Jace, the Mind Sculptor",
@@ -22013,7 +22013,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:23+00:00",
+        "lastUpdated": "2026-07-14T10:17:33+00:00",
         "cardmarket": {
           "idProduct": 294787,
           "name": "Indomitable Creativity",
@@ -22158,7 +22158,7 @@ window.marketPricesData = {
         "matchConfidence": 100.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:23+00:00",
+        "lastUpdated": "2026-07-14T10:17:33+00:00",
         "cardmarket": {
           "idProduct": 9777,
           "name": "Urza's Bauble",
@@ -22303,7 +22303,7 @@ window.marketPricesData = {
         "matchConfidence": 100.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:23+00:00",
+        "lastUpdated": "2026-07-14T10:17:33+00:00",
         "cardmarket": {
           "idProduct": 466354,
           "name": "Ugin, the Spirit Dragon",
@@ -22448,7 +22448,7 @@ window.marketPricesData = {
         "matchConfidence": 100.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:23+00:00",
+        "lastUpdated": "2026-07-14T10:17:33+00:00",
         "cardmarket": {
           "idProduct": 572239,
           "name": "Eternal Dragon",
@@ -22593,7 +22593,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:23+00:00",
+        "lastUpdated": "2026-07-14T10:17:33+00:00",
         "cardmarket": {
           "idProduct": 282321,
           "name": "Emrakul, the Aeons Torn",
@@ -22738,7 +22738,7 @@ window.marketPricesData = {
         "matchConfidence": 100.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:23+00:00",
+        "lastUpdated": "2026-07-14T10:17:33+00:00",
         "cardmarket": {
           "idProduct": 482729,
           "name": "Karn Liberated",
@@ -22883,7 +22883,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:23+00:00",
+        "lastUpdated": "2026-07-14T10:17:33+00:00",
         "cardmarket": {
           "idProduct": 748645,
           "name": "Blood Crypt",
@@ -23028,7 +23028,7 @@ window.marketPricesData = {
         "matchConfidence": 100.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:23+00:00",
+        "lastUpdated": "2026-07-14T10:17:33+00:00",
         "cardmarket": {
           "idProduct": 482769,
           "name": "Engineered Explosives",
@@ -23173,7 +23173,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:23+00:00",
+        "lastUpdated": "2026-07-14T10:17:33+00:00",
         "cardmarket": {
           "idProduct": 751050,
           "name": "Undercity Sewers",
@@ -23318,7 +23318,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:23+00:00",
+        "lastUpdated": "2026-07-14T10:17:33+00:00",
         "cardmarket": {
           "idProduct": 301528,
           "name": "Mishra's Bauble",
@@ -23463,7 +23463,7 @@ window.marketPricesData = {
         "matchConfidence": 100.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:23+00:00",
+        "lastUpdated": "2026-07-14T10:17:33+00:00",
         "cardmarket": {
           "idProduct": 270621,
           "name": "Skeletal Scrying",
@@ -23608,7 +23608,7 @@ window.marketPricesData = {
         "matchConfidence": 161.19,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "foil_to_normal",
-        "lastUpdated": "2026-07-14T09:58:23+00:00",
+        "lastUpdated": "2026-07-14T10:17:33+00:00",
         "cardmarket": {
           "idProduct": 847319,
           "name": "Sabotage",
@@ -23782,7 +23782,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "idioma_no_soportado:Chino-S",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:23+00:00",
+        "lastUpdated": "2026-07-14T10:17:33+00:00",
         "cardmarket": {
           "idProduct": 254452,
           "name": "Cavern of Souls",
@@ -23926,7 +23926,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:23+00:00",
+        "lastUpdated": "2026-07-14T10:17:33+00:00",
         "cardmarket": {
           "idProduct": 751044,
           "name": "Thundering Falls",
@@ -24071,7 +24071,7 @@ window.marketPricesData = {
         "matchConfidence": 100.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:23+00:00",
+        "lastUpdated": "2026-07-14T10:17:33+00:00",
         "cardmarket": {
           "idProduct": 678654,
           "name": "Wurmcoil Engine",
@@ -24216,7 +24216,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:23+00:00",
+        "lastUpdated": "2026-07-14T10:17:33+00:00",
         "cardmarket": {
           "idProduct": 672312,
           "name": "Leyline Binding",
@@ -24361,7 +24361,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:23+00:00",
+        "lastUpdated": "2026-07-14T10:17:33+00:00",
         "cardmarket": {
           "idProduct": 751040,
           "name": "Shadowy Backstreet",
@@ -24506,7 +24506,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:23+00:00",
+        "lastUpdated": "2026-07-14T10:17:33+00:00",
         "cardmarket": {
           "idProduct": 688554,
           "name": "Urza, Lord High Artificer",
@@ -24651,7 +24651,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:23+00:00",
+        "lastUpdated": "2026-07-14T10:17:33+00:00",
         "cardmarket": {
           "idProduct": 672312,
           "name": "Leyline Binding",
@@ -24796,7 +24796,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:23+00:00",
+        "lastUpdated": "2026-07-14T10:17:33+00:00",
         "cardmarket": {
           "idProduct": 10836,
           "name": "Powder Keg",
@@ -24941,7 +24941,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:23+00:00",
+        "lastUpdated": "2026-07-14T10:17:33+00:00",
         "cardmarket": {
           "idProduct": 22160,
           "name": "Amulet of Vigor",
@@ -25086,7 +25086,7 @@ window.marketPricesData = {
         "matchConfidence": 100.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:23+00:00",
+        "lastUpdated": "2026-07-14T10:17:33+00:00",
         "cardmarket": {
           "idProduct": 753294,
           "name": "Valakut, the Molten Pinnacle",
@@ -25231,7 +25231,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:23+00:00",
+        "lastUpdated": "2026-07-14T10:17:33+00:00",
         "cardmarket": {
           "idProduct": 710196,
           "name": "Nissa, Resurgent Animist",
@@ -25376,7 +25376,7 @@ window.marketPricesData = {
         "matchConfidence": 100.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:23+00:00",
+        "lastUpdated": "2026-07-14T10:17:33+00:00",
         "cardmarket": {
           "idProduct": 319862,
           "name": "Teferi, Hero of Dominaria",
@@ -25521,7 +25521,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:23+00:00",
+        "lastUpdated": "2026-07-14T10:17:34+00:00",
         "cardmarket": {
           "idProduct": 715923,
           "name": "Witch-king of Angmar",
@@ -25666,7 +25666,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:23+00:00",
+        "lastUpdated": "2026-07-14T10:17:34+00:00",
         "cardmarket": {
           "idProduct": 715907,
           "name": "Nazgûl",
@@ -25811,7 +25811,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:23+00:00",
+        "lastUpdated": "2026-07-14T10:17:34+00:00",
         "cardmarket": {
           "idProduct": 834181,
           "name": "Ouroboroid",
@@ -25956,7 +25956,7 @@ window.marketPricesData = {
         "matchConfidence": 100.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:23+00:00",
+        "lastUpdated": "2026-07-14T10:17:34+00:00",
         "cardmarket": {
           "idProduct": 847106,
           "name": "Mindbreak Trap",
@@ -26101,7 +26101,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:23+00:00",
+        "lastUpdated": "2026-07-14T10:17:34+00:00",
         "cardmarket": {
           "idProduct": 364,
           "name": "Sword of Fire and Ice",
@@ -26246,7 +26246,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:23+00:00",
+        "lastUpdated": "2026-07-14T10:17:34+00:00",
         "cardmarket": {
           "idProduct": 527465,
           "name": "Hengegate Pathway // Mistgate Pathway",
@@ -26391,7 +26391,7 @@ window.marketPricesData = {
         "matchConfidence": 100.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:24+00:00",
+        "lastUpdated": "2026-07-14T10:17:34+00:00",
         "cardmarket": {
           "idProduct": 559897,
           "name": "Mystical Archive: \"\"Brainstorm\"\" Playmat",
@@ -26520,7 +26520,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:24+00:00",
+        "lastUpdated": "2026-07-14T10:17:34+00:00",
         "cardmarket": {
           "idProduct": 715954,
           "name": "Aragorn, the Uniter",
@@ -26665,7 +26665,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:24+00:00",
+        "lastUpdated": "2026-07-14T10:17:34+00:00",
         "cardmarket": {
           "idProduct": 316,
           "name": "Arcbound Ravager",
@@ -26810,7 +26810,7 @@ window.marketPricesData = {
         "matchConfidence": 164.18,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "foil_to_normal",
-        "lastUpdated": "2026-07-14T09:58:24+00:00",
+        "lastUpdated": "2026-07-14T10:17:34+00:00",
         "cardmarket": {
           "idProduct": 884171,
           "name": "Rift Herald",
@@ -26983,7 +26983,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:24+00:00",
+        "lastUpdated": "2026-07-14T10:17:34+00:00",
         "cardmarket": {
           "idProduct": 715888,
           "name": "Gandalf the White",
@@ -27128,7 +27128,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:24+00:00",
+        "lastUpdated": "2026-07-14T10:17:34+00:00",
         "cardmarket": {
           "idProduct": 9300,
           "name": "Recurring Nightmare",
@@ -27273,7 +27273,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:24+00:00",
+        "lastUpdated": "2026-07-14T10:17:34+00:00",
         "cardmarket": {
           "idProduct": 771482,
           "name": "Harbinger of the Seas",
@@ -27418,7 +27418,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:24+00:00",
+        "lastUpdated": "2026-07-14T10:17:34+00:00",
         "cardmarket": {
           "idProduct": 715943,
           "name": "Last March of the Ents",
@@ -27563,7 +27563,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:24+00:00",
+        "lastUpdated": "2026-07-14T10:17:34+00:00",
         "cardmarket": {
           "idProduct": 485929,
           "name": "Blood Moon",
@@ -27708,7 +27708,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:24+00:00",
+        "lastUpdated": "2026-07-14T10:17:34+00:00",
         "cardmarket": {
           "idProduct": 802788,
           "name": "Snapcaster Mage",
@@ -27853,7 +27853,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:24+00:00",
+        "lastUpdated": "2026-07-14T10:17:34+00:00",
         "cardmarket": {
           "idProduct": 10658,
           "name": "Deranged Hermit",
@@ -27998,7 +27998,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:24+00:00",
+        "lastUpdated": "2026-07-14T10:17:34+00:00",
         "cardmarket": {
           "idProduct": 862608,
           "name": "Formidable Speaker",
@@ -28143,7 +28143,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:24+00:00",
+        "lastUpdated": "2026-07-14T10:17:34+00:00",
         "cardmarket": {
           "idProduct": 764463,
           "name": "Harvester of Misery",
@@ -28288,7 +28288,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:24+00:00",
+        "lastUpdated": "2026-07-14T10:17:34+00:00",
         "cardmarket": {
           "idProduct": 363550,
           "name": "Watery Grave",
@@ -28433,7 +28433,7 @@ window.marketPricesData = {
         "matchConfidence": 114.28,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "foil_to_normal",
-        "lastUpdated": "2026-07-14T09:58:24+00:00",
+        "lastUpdated": "2026-07-14T10:17:34+00:00",
         "cardmarket": {
           "idProduct": 871891,
           "name": "Spiritforged: Pre-Rift Event Kit",
@@ -28605,7 +28605,7 @@ window.marketPricesData = {
         "categoryName": null,
         "matchConfidence": 0,
         "matchReason": "nombre_no_estricto:80",
-        "lastUpdated": "2026-07-14T09:58:24+00:00",
+        "lastUpdated": "2026-07-14T10:17:35+00:00",
         "candidates": [
           {
             "idProduct": 883831,
@@ -28776,7 +28776,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:24+00:00",
+        "lastUpdated": "2026-07-14T10:17:35+00:00",
         "cardmarket": {
           "idProduct": 710210,
           "name": "Tranquil Frillback",
@@ -28921,7 +28921,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:25+00:00",
+        "lastUpdated": "2026-07-14T10:17:35+00:00",
         "cardmarket": {
           "idProduct": 796513,
           "name": "Sire of Seven Deaths",
@@ -29066,7 +29066,7 @@ window.marketPricesData = {
         "matchConfidence": 100.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:26+00:00",
+        "lastUpdated": "2026-07-14T10:17:36+00:00",
         "cardmarket": {
           "idProduct": 718359,
           "name": "The Lord of the Rings: Tales of Middle-earth: Art Series Set",
@@ -29195,7 +29195,7 @@ window.marketPricesData = {
         "matchConfidence": 100.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:26+00:00",
+        "lastUpdated": "2026-07-14T10:17:36+00:00",
         "cardmarket": {
           "idProduct": 2172,
           "name": "Mental Note",
@@ -29340,7 +29340,7 @@ window.marketPricesData = {
         "matchConfidence": 100.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:26+00:00",
+        "lastUpdated": "2026-07-14T10:17:36+00:00",
         "cardmarket": {
           "idProduct": 482829,
           "name": "Noble Hierarch",
@@ -29484,7 +29484,7 @@ window.marketPricesData = {
         "categoryName": null,
         "matchConfidence": 0,
         "matchReason": "nombre_no_estricto:46",
-        "lastUpdated": "2026-07-14T09:58:26+00:00",
+        "lastUpdated": "2026-07-14T10:17:36+00:00",
         "candidates": [
           {
             "idProduct": 684562,
@@ -29655,7 +29655,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:26+00:00",
+        "lastUpdated": "2026-07-14T10:17:36+00:00",
         "cardmarket": {
           "idProduct": 751048,
           "name": "Hedge Maze",
@@ -29800,7 +29800,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:26+00:00",
+        "lastUpdated": "2026-07-14T10:17:36+00:00",
         "cardmarket": {
           "idProduct": 802790,
           "name": "The Meathook Massacre",
@@ -29945,7 +29945,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:26+00:00",
+        "lastUpdated": "2026-07-14T10:17:36+00:00",
         "cardmarket": {
           "idProduct": 9063,
           "name": "Reflecting Pool",
@@ -30090,7 +30090,7 @@ window.marketPricesData = {
         "matchConfidence": 100.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:26+00:00",
+        "lastUpdated": "2026-07-14T10:17:36+00:00",
         "cardmarket": {
           "idProduct": 10862,
           "name": "Enlightened Tutor",
@@ -30235,7 +30235,7 @@ window.marketPricesData = {
         "matchConfidence": 161.72,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "foil_to_normal",
-        "lastUpdated": "2026-07-14T09:58:26+00:00",
+        "lastUpdated": "2026-07-14T10:17:36+00:00",
         "cardmarket": {
           "idProduct": 847257,
           "name": "Thousand-Tailed Watcher",
@@ -30409,7 +30409,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:26+00:00",
+        "lastUpdated": "2026-07-14T10:17:36+00:00",
         "cardmarket": {
           "idProduct": 430249,
           "name": "Heliod, Sun-Crowned",
@@ -30554,7 +30554,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:26+00:00",
+        "lastUpdated": "2026-07-14T10:17:36+00:00",
         "cardmarket": {
           "idProduct": 371841,
           "name": "Teferi, Time Raveler",
@@ -30699,7 +30699,7 @@ window.marketPricesData = {
         "matchConfidence": 100.0,
         "matchReason": "idioma_no_soportado:Chino-S",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:26+00:00",
+        "lastUpdated": "2026-07-14T10:17:36+00:00",
         "cardmarket": {
           "idProduct": 359968,
           "name": "Scapeshift",
@@ -30843,7 +30843,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:26+00:00",
+        "lastUpdated": "2026-07-14T10:17:36+00:00",
         "cardmarket": {
           "idProduct": 245839,
           "name": "Karn Liberated",
@@ -30988,7 +30988,7 @@ window.marketPricesData = {
         "matchConfidence": 162.72,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "foil_to_normal",
-        "lastUpdated": "2026-07-14T09:58:26+00:00",
+        "lastUpdated": "2026-07-14T10:17:36+00:00",
         "cardmarket": {
           "idProduct": 847374,
           "name": "Seal of Discord",
@@ -31162,7 +31162,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:26+00:00",
+        "lastUpdated": "2026-07-14T10:17:36+00:00",
         "cardmarket": {
           "idProduct": 12941,
           "name": "Umezawa's Jitte",
@@ -31307,7 +31307,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:26+00:00",
+        "lastUpdated": "2026-07-14T10:17:36+00:00",
         "cardmarket": {
           "idProduct": 431404,
           "name": "Shadowspear",
@@ -31452,7 +31452,7 @@ window.marketPricesData = {
         "matchConfidence": 100.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:26+00:00",
+        "lastUpdated": "2026-07-14T10:17:36+00:00",
         "cardmarket": {
           "idProduct": 378381,
           "name": "Veil of Summer",
@@ -31597,7 +31597,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:26+00:00",
+        "lastUpdated": "2026-07-14T10:17:36+00:00",
         "cardmarket": {
           "idProduct": 258396,
           "name": "Rest in Peace",
@@ -31742,7 +31742,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:26+00:00",
+        "lastUpdated": "2026-07-14T10:17:36+00:00",
         "cardmarket": {
           "idProduct": 692438,
           "name": "Jace, the Perfected Mind",
@@ -31886,7 +31886,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:26+00:00",
+        "lastUpdated": "2026-07-14T10:17:36+00:00",
         "cardmarket": {
           "idProduct": 482729,
           "name": "Karn Liberated",
@@ -32031,7 +32031,7 @@ window.marketPricesData = {
         "matchConfidence": 163.47,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "foil_to_normal",
-        "lastUpdated": "2026-07-14T09:58:26+00:00",
+        "lastUpdated": "2026-07-14T10:17:36+00:00",
         "cardmarket": {
           "idProduct": 884172,
           "name": "The Ruination",
@@ -32205,7 +32205,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:26+00:00",
+        "lastUpdated": "2026-07-14T10:17:36+00:00",
         "cardmarket": {
           "idProduct": 692781,
           "name": "Venerated Rotpriest",
@@ -32349,7 +32349,7 @@ window.marketPricesData = {
         "categoryName": null,
         "matchConfidence": 0,
         "matchReason": "edicion_no_confirmada",
-        "lastUpdated": "2026-07-14T09:58:26+00:00",
+        "lastUpdated": "2026-07-14T10:17:36+00:00",
         "candidates": [
           {
             "idProduct": 495740,
@@ -32520,7 +32520,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:26+00:00",
+        "lastUpdated": "2026-07-14T10:17:36+00:00",
         "cardmarket": {
           "idProduct": 689721,
           "name": "Elesh Norn, Mother of Machines",
@@ -32665,7 +32665,7 @@ window.marketPricesData = {
         "matchConfidence": 100.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:26+00:00",
+        "lastUpdated": "2026-07-14T10:17:36+00:00",
         "cardmarket": {
           "idProduct": 19704,
           "name": "Tezzeret the Seeker",
@@ -32810,7 +32810,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:26+00:00",
+        "lastUpdated": "2026-07-14T10:17:36+00:00",
         "cardmarket": {
           "idProduct": 807213,
           "name": "The Aetherspark",
@@ -32955,7 +32955,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:26+00:00",
+        "lastUpdated": "2026-07-14T10:17:37+00:00",
         "cardmarket": {
           "idProduct": 374616,
           "name": "Ranger-Captain of Eos",
@@ -33100,7 +33100,7 @@ window.marketPricesData = {
         "matchConfidence": 100.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:26+00:00",
+        "lastUpdated": "2026-07-14T10:17:37+00:00",
         "cardmarket": {
           "idProduct": 664297,
           "name": "Damnation",
@@ -33245,7 +33245,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:26+00:00",
+        "lastUpdated": "2026-07-14T10:17:37+00:00",
         "cardmarket": {
           "idProduct": 292493,
           "name": "Spirebluff Canal",
@@ -33390,7 +33390,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:26+00:00",
+        "lastUpdated": "2026-07-14T10:17:37+00:00",
         "cardmarket": {
           "idProduct": 454993,
           "name": "Indatha Triome",
@@ -33535,7 +33535,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:26+00:00",
+        "lastUpdated": "2026-07-14T10:17:37+00:00",
         "cardmarket": {
           "idProduct": 611286,
           "name": "Xander's Lounge",
@@ -33680,7 +33680,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:26+00:00",
+        "lastUpdated": "2026-07-14T10:17:37+00:00",
         "cardmarket": {
           "idProduct": 611284,
           "name": "Spara's Headquarters",
@@ -33825,7 +33825,7 @@ window.marketPricesData = {
         "matchConfidence": 100.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge",
         "variantFallback": "foil_to_normal",
-        "lastUpdated": "2026-07-14T09:58:26+00:00",
+        "lastUpdated": "2026-07-14T10:17:37+00:00",
         "cardmarket": {
           "idProduct": 788210,
           "name": "Overlord of the Mistmoors",
@@ -33969,7 +33969,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:27+00:00",
+        "lastUpdated": "2026-07-14T10:17:37+00:00",
         "cardmarket": {
           "idProduct": 716303,
           "name": "Elanor Gardner",
@@ -34114,7 +34114,7 @@ window.marketPricesData = {
         "matchConfidence": 100.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:27+00:00",
+        "lastUpdated": "2026-07-14T10:17:37+00:00",
         "cardmarket": {
           "idProduct": 484014,
           "name": "Mystic Gate",
@@ -34259,7 +34259,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:27+00:00",
+        "lastUpdated": "2026-07-14T10:17:37+00:00",
         "cardmarket": {
           "idProduct": 483989,
           "name": "Trinisphere",
@@ -34404,7 +34404,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:27+00:00",
+        "lastUpdated": "2026-07-14T10:17:37+00:00",
         "cardmarket": {
           "idProduct": 455013,
           "name": "Raugrin Triome",
@@ -34549,7 +34549,7 @@ window.marketPricesData = {
         "matchConfidence": 100.0,
         "matchReason": "idioma_no_soportado:Chino-S",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:27+00:00",
+        "lastUpdated": "2026-07-14T10:17:37+00:00",
         "cardmarket": {
           "idProduct": 484019,
           "name": "Sunken Ruins",
@@ -34693,7 +34693,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:27+00:00",
+        "lastUpdated": "2026-07-14T10:17:37+00:00",
         "cardmarket": {
           "idProduct": 11689,
           "name": "Dust Bowl",
@@ -34838,7 +34838,7 @@ window.marketPricesData = {
         "matchConfidence": 88.61,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:27+00:00",
+        "lastUpdated": "2026-07-14T10:17:37+00:00",
         "cardmarket": {
           "idProduct": 456168,
           "name": "Gamegenic Playmat Tube (Black)",
@@ -34967,7 +34967,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:27+00:00",
+        "lastUpdated": "2026-07-14T10:17:37+00:00",
         "cardmarket": {
           "idProduct": 375363,
           "name": "Hall of Heliod's Generosity",
@@ -35112,7 +35112,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:27+00:00",
+        "lastUpdated": "2026-07-14T10:17:38+00:00",
         "cardmarket": {
           "idProduct": 401774,
           "name": "Brazen Borrower // Petty Theft",
@@ -35257,7 +35257,7 @@ window.marketPricesData = {
         "matchConfidence": 100.0,
         "matchReason": "varios_candidatos_similares",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:28+00:00",
+        "lastUpdated": "2026-07-14T10:17:38+00:00",
         "cardmarket": {
           "idProduct": 717071,
           "name": "The Lord of the Rings: Tales of Middle-earth: Uncommon Set",
@@ -35438,7 +35438,7 @@ window.marketPricesData = {
         "matchConfidence": 161.92,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "foil_to_normal",
-        "lastUpdated": "2026-07-14T09:58:28+00:00",
+        "lastUpdated": "2026-07-14T10:17:38+00:00",
         "cardmarket": {
           "idProduct": 866888,
           "name": "Downwell",
@@ -35612,7 +35612,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:28+00:00",
+        "lastUpdated": "2026-07-14T10:17:38+00:00",
         "cardmarket": {
           "idProduct": 750306,
           "name": "Dark Confidant",
@@ -35756,7 +35756,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:28+00:00",
+        "lastUpdated": "2026-07-14T10:17:38+00:00",
         "cardmarket": {
           "idProduct": 455003,
           "name": "Ketria Triome",
@@ -35901,7 +35901,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:28+00:00",
+        "lastUpdated": "2026-07-14T10:17:38+00:00",
         "cardmarket": {
           "idProduct": 371841,
           "name": "Teferi, Time Raveler",
@@ -36046,7 +36046,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:28+00:00",
+        "lastUpdated": "2026-07-14T10:17:38+00:00",
         "cardmarket": {
           "idProduct": 653184,
           "name": "Raffine's Tower",
@@ -36191,7 +36191,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:28+00:00",
+        "lastUpdated": "2026-07-14T10:17:38+00:00",
         "cardmarket": {
           "idProduct": 722531,
           "name": "Sun Quan, Lord of Wu",
@@ -36336,7 +36336,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:28+00:00",
+        "lastUpdated": "2026-07-14T10:17:38+00:00",
         "cardmarket": {
           "idProduct": 455033,
           "name": "Zagoth Triome",
@@ -36481,7 +36481,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:29+00:00",
+        "lastUpdated": "2026-07-14T10:17:38+00:00",
         "cardmarket": {
           "idProduct": 455023,
           "name": "Savai Triome",
@@ -36626,7 +36626,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:29+00:00",
+        "lastUpdated": "2026-07-14T10:17:38+00:00",
         "cardmarket": {
           "idProduct": 3240,
           "name": "Fire // Ice",
@@ -36771,7 +36771,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:29+00:00",
+        "lastUpdated": "2026-07-14T10:17:38+00:00",
         "cardmarket": {
           "idProduct": 556944,
           "name": "Grapeshot",
@@ -36916,7 +36916,7 @@ window.marketPricesData = {
         "matchConfidence": 100.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:29+00:00",
+        "lastUpdated": "2026-07-14T10:17:38+00:00",
         "cardmarket": {
           "idProduct": 482829,
           "name": "Noble Hierarch",
@@ -37061,7 +37061,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:29+00:00",
+        "lastUpdated": "2026-07-14T10:17:38+00:00",
         "cardmarket": {
           "idProduct": 14040,
           "name": "Vesuva",
@@ -37206,7 +37206,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:29+00:00",
+        "lastUpdated": "2026-07-14T10:17:38+00:00",
         "cardmarket": {
           "idProduct": 683445,
           "name": "Cityscape Leveler",
@@ -37351,7 +37351,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:29+00:00",
+        "lastUpdated": "2026-07-14T10:17:39+00:00",
         "cardmarket": {
           "idProduct": 374514,
           "name": "Fiery Islet",
@@ -37496,7 +37496,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:29+00:00",
+        "lastUpdated": "2026-07-14T10:17:39+00:00",
         "cardmarket": {
           "idProduct": 751049,
           "name": "Underground Mortuary",
@@ -37641,7 +37641,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:29+00:00",
+        "lastUpdated": "2026-07-14T10:17:39+00:00",
         "cardmarket": {
           "idProduct": 607526,
           "name": "Takenuma, Abandoned Mire",
@@ -37785,7 +37785,7 @@ window.marketPricesData = {
         "categoryName": null,
         "matchConfidence": 0,
         "matchReason": "nombre_no_estricto:73",
-        "lastUpdated": "2026-07-14T09:58:29+00:00",
+        "lastUpdated": "2026-07-14T10:17:39+00:00",
         "candidates": [
           {
             "idProduct": 257269,
@@ -37884,6 +37884,22 @@ window.marketPricesData = {
             "url": "https://www.cardmarket.com/en/Accessories/Products/Search?searchString=Hareruya+Deck+Box+%28Red%29"
           },
           {
+            "idProduct": 257270,
+            "name": "tcgmarket.eu Playmat (Blue)",
+            "game": "accessories",
+            "kind": "accessory",
+            "categoryName": "Playmats",
+            "idExpansion": "",
+            "expansionName": "",
+            "score": 67.82,
+            "reasons": "nombre=62;tipo=sellado;con_priceguide;precio_variante;categoria_sellado",
+            "price": 5.99,
+            "priceLabel": "trend",
+            "foilPrice": 5.99,
+            "foilPriceLabel": "trend",
+            "url": "https://www.cardmarket.com/en/Accessories/Products/Search?searchString=tcgmarket.eu+Playmat+%28Blue%29"
+          },
+          {
             "idProduct": 287486,
             "name": "Ultimate Guard Playmat (Red)",
             "game": "accessories",
@@ -37898,22 +37914,6 @@ window.marketPricesData = {
             "foilPrice": 10.34,
             "foilPriceLabel": "trend",
             "url": "https://www.cardmarket.com/en/Accessories/Products/Search?searchString=Ultimate+Guard+Playmat+%28Red%29"
-          },
-          {
-            "idProduct": 263241,
-            "name": "Ultra Pro: Artist Gallery Playmat (Red)",
-            "game": "accessories",
-            "kind": "accessory",
-            "categoryName": "Playmats",
-            "idExpansion": "",
-            "expansionName": "",
-            "score": 66.86,
-            "reasons": "nombre=61;tipo=sellado;con_priceguide;precio_variante;categoria_sellado",
-            "price": 9.42,
-            "priceLabel": "trend",
-            "foilPrice": 9.42,
-            "foilPriceLabel": "trend",
-            "url": "https://www.cardmarket.com/en/Accessories/Products/Search?searchString=Ultra+Pro%3A+Artist+Gallery+Playmat+%28Red%29"
           }
         ],
         "quantity": 1.0,
@@ -37956,7 +37956,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:29+00:00",
+        "lastUpdated": "2026-07-14T10:17:39+00:00",
         "cardmarket": {
           "idProduct": 254220,
           "name": "Griselbrand",
@@ -38101,7 +38101,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:29+00:00",
+        "lastUpdated": "2026-07-14T10:17:39+00:00",
         "cardmarket": {
           "idProduct": 807314,
           "name": "Loot, the Pathfinder",
@@ -38246,7 +38246,7 @@ window.marketPricesData = {
         "matchConfidence": 102.0,
         "matchReason": "scrape_blocked:HTTP 403: posible bloqueo/challenge;fallback_priceguide",
         "variantFallback": "none",
-        "lastUpdated": "2026-07-14T09:58:29+00:00",
+        "lastUpdated": "2026-07-14T10:17:39+00:00",
         "cardmarket": {
           "idProduct": 316,
           "name": "Arcbound Ravager",

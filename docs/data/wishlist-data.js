@@ -6,7 +6,7 @@ window.wishlistData = {
     "marketPrices": {
       "source": "Cardmarket Data Tables + Direct Scraping",
       "pricingMode": "scrape",
-      "generatedAt": "2026-07-14T09:58:30+00:00",
+      "generatedAt": "2026-07-14T10:17:39+00:00",
       "summary": {
         "totalItems": 0,
         "resolved": 0,
