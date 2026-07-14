@@ -1,0 +1,179 @@
+name: Actualizar precios Cardmarket
+
+on:
+  workflow_dispatch:
+    inputs:
+      min_confidence:
+        description: "Confianza minima para match automatico"
+        required: false
+        default: "72"
+      force_download:
+        description: "Redescargar tablas Data Tables aunque exista cache"
+        required: false
+        default: "true"
+      pricing_mode:
+        description: "Modo de precio: scrape usa listings publicos; datatables usa price guides diarios"
+        required: false
+        default: "scrape"
+      listing_language:
+        description: "Idioma de listings. auto usa el idioma de cada item"
+        required: false
+        default: "auto"
+      listing_condition:
+        description: "Condicion minima de listings"
+        required: false
+        default: "nm"
+      listing_sample_size:
+        description: "Numero de ofertas validas para calcular la media"
+        required: false
+        default: "5"
+      force_scrape_download:
+        description: "Redescargar HTML de scraping aunque exista cache reciente"
+        required: false
+        default: "true"
+      max_scrape_items:
+        description: "Limite de elementos scrape para pruebas. 0 = todos"
+        required: false
+        default: "0"
+      debug_scrape_html:
+        description: "Guardar HTML bloqueado para depuracion"
+        required: false
+        default: "false"
+      scrape_fallback_to_priceguide:
+        description: "Usar Data Tables como fallback si Cardmarket bloquea el scraping"
+        required: false
+        default: "true"
+      scryfall_cardmarket_match:
+        description: "Usar Scryfall para resolver idProduct exacto en MTG"
+        required: false
+        default: "true"
+      force_scryfall_download:
+        description: "Redescargar cache Scryfall -> Cardmarket"
+        required: false
+        default: "false"
+      scryfall_sleep:
+        description: "Pausa entre llamadas a Scryfall, en segundos"
+        required: false
+        default: "0.25"
+      scryfall_max_retries:
+        description: "Reintentos ante limite 429 de Scryfall"
+        required: false
+        default: "4"
+      riftbound_image_match:
+        description: "Usar codigo de imagen validada para resolver versiones Riftbound"
+        required: false
+        default: "true"
+      riftbound_price_heuristic:
+        description: "Permitir heuristica por coste/precio en duplicados Riftbound sin V.1/V.2/V.3"
+        required: false
+        default: "true"
+
+permissions:
+  contents: write
+
+jobs:
+  update-cardmarket-prices:
+    runs-on: ubuntu-latest
+    env:
+      CARDMARKET_COOKIE: ${{ secrets.CARDMARKET_COOKIE }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Instalar dependencias scraping
+        run: python -m pip install --upgrade beautifulsoup4
+
+      - name: Restaurar cache Scryfall y scraping
+        uses: actions/cache@v4
+        with:
+          path: |
+            .cache/scryfall-cardmarket
+            .cache/cardmarket-scrape
+          key: cardmarket-v8-cache-${{ runner.os }}-${{ hashFiles('docs/data/portfolio-data.json', 'docs/data/wishlist-data.json') }}
+          restore-keys: |
+            cardmarket-v8-cache-${{ runner.os }}-
+            cardmarket-v7-cache-${{ runner.os }}-
+
+      - name: Actualizar precios Cardmarket V8
+        run: |
+          FORCE_FLAG=""
+          if [ "${{ github.event.inputs.force_download }}" = "true" ]; then
+            FORCE_FLAG="--force-download"
+          fi
+          SCRAPE_FORCE_FLAG=""
+          if [ "${{ github.event.inputs.force_scrape_download }}" = "true" ]; then
+            SCRAPE_FORCE_FLAG="--force-scrape-download"
+          fi
+          DEBUG_SCRAPE_FLAG=""
+          if [ "${{ github.event.inputs.debug_scrape_html }}" = "true" ]; then
+            DEBUG_SCRAPE_FLAG="--debug-scrape-html"
+          fi
+          SCRAPE_FALLBACK_FLAG="--scrape-fallback-to-priceguide"
+          if [ "${{ github.event.inputs.scrape_fallback_to_priceguide }}" = "false" ]; then
+            SCRAPE_FALLBACK_FLAG="--no-scrape-fallback-to-priceguide"
+          fi
+          SCRYFALL_MATCH_FLAG="--scryfall-cardmarket-match"
+          if [ "${{ github.event.inputs.scryfall_cardmarket_match }}" = "false" ]; then
+            SCRYFALL_MATCH_FLAG="--no-scryfall-cardmarket-match"
+          fi
+          SCRYFALL_FORCE_FLAG=""
+          if [ "${{ github.event.inputs.force_scryfall_download }}" = "true" ]; then
+            SCRYFALL_FORCE_FLAG="--force-scryfall-download"
+          fi
+          RIFTBOUND_IMAGE_FLAG="--riftbound-image-match"
+          if [ "${{ github.event.inputs.riftbound_image_match }}" = "false" ]; then
+            RIFTBOUND_IMAGE_FLAG="--no-riftbound-image-match"
+          fi
+          RIFTBOUND_PRICE_HEURISTIC_FLAG="--riftbound-price-heuristic"
+          if [ "${{ github.event.inputs.riftbound_price_heuristic }}" = "false" ]; then
+            RIFTBOUND_PRICE_HEURISTIC_FLAG="--no-riftbound-price-heuristic"
+          fi
+          python scripts/update_cardmarket_prices.py \
+            --portfolio docs/data/portfolio-data.json \
+            --wishlist docs/data/wishlist-data.json \
+            --overrides docs/data/cardmarket-overrides.json \
+            --out docs/data \
+            --cache .cache/cardmarket \
+            --scrape-cache .cache/cardmarket-scrape \
+            --scryfall-cache .cache/scryfall-cardmarket \
+            --scryfall-sleep "${{ github.event.inputs.scryfall_sleep }}" \
+            --scryfall-max-retries "${{ github.event.inputs.scryfall_max_retries }}" \
+            --update-portfolio \
+            --update-wishlist \
+            --min-confidence "${{ github.event.inputs.min_confidence }}" \
+            --pricing-mode "${{ github.event.inputs.pricing_mode }}" \
+            --listing-language "${{ github.event.inputs.listing_language }}" \
+            --listing-condition "${{ github.event.inputs.listing_condition }}" \
+            --listing-sample-size "${{ github.event.inputs.listing_sample_size }}" \
+            --max-scrape-items "${{ github.event.inputs.max_scrape_items }}" \
+            --strict-matching \
+            $FORCE_FLAG \
+            $SCRAPE_FORCE_FLAG \
+            $DEBUG_SCRAPE_FLAG \
+            $SCRAPE_FALLBACK_FLAG \
+            $SCRYFALL_MATCH_FLAG \
+            $SCRYFALL_FORCE_FLAG \
+            $RIFTBOUND_IMAGE_FLAG \
+            $RIFTBOUND_PRICE_HEURISTIC_FLAG
+
+      - name: Commit de resultados
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/data/market-prices.json docs/data/market-prices.js
+          git add docs/data/portfolio-data.json docs/data/portfolio-data.js
+          git add docs/data/wishlist-data.json docs/data/wishlist-data.js
+          git add docs/data/cardmarket-overrides.json
+          git add docs/data/cardmarket-matching-report.json docs/data/cardmarket-matching-report.csv
+          git add scripts/update_cardmarket_prices.py .github/workflows/update-cardmarket-prices.yml README_CARDMARKET.md docs/app.js docs/index.html docs/styles.css
+          if git diff --staged --quiet; then
+            echo "No hay cambios que commitear."
+          else
+            git commit -m "Actualizar precios Cardmarket V8"
+            git push
+          fi
